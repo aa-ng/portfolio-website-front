@@ -1,16 +1,16 @@
 <template>
-  <v-container>
+  <v-container class="mt-6">
     <v-layout align-center justify-center row wrap>
       <v-flex xs12 md10>
         <v-layout column>
           <v-container grid-list-md>
-            <alex-appearence-config
+            <alex-appearence-settings
               :primaryDrawer="primaryDrawer"
               :drawers="drawers"
               :footer="footer"
               :theme="theme"
               v-if="!primaryDrawer.mini"
-            ></alex-appearence-config>
+            ></alex-appearence-settings>
           </v-container>
         </v-layout>
       </v-flex>
@@ -48,7 +48,11 @@
       }
     },
     components: {
-      'alex-appearence-config': AppearenceSettings
+      'alex-appearence-settings': AppearenceSettings
     }
   }
 </script>
+
+<style scoped>
+  .container { padding: 16px 8px; }
+</style>

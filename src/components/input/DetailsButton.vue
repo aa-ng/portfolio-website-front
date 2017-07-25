@@ -2,7 +2,7 @@
   <span>
     <v-btn
       flat
-      class="pink--text"
+      class="info--text"
       v-for="action in actions"
       :href="action.href"
       :to="action.link"

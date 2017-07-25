@@ -24,7 +24,7 @@
         drawerLinks: [
           { icon: 'home', link: '/', label: 'Home Page' },
           { icon: 'laptop', link: '/projects', label: 'My projects' },
-          { icon: 'assignment', href: 'http://resume.alex-ng.com', label: 'Resume' },
+          { icon: 'assignment', href: '/static/documents/resume.pdf', label: 'Resume' },
           { icon: 'face', link: '/about', label: 'About alex' },
           { icon: 'settings', link: '/settings', label: 'Settings' }
         ]

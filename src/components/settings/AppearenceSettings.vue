@@ -1,8 +1,8 @@
 <template>
-  <v-card class="elevation-0">
+  <v-card class="elevation-0 mt-5">
     <v-card-text>
       <v-layout row wrap>
-        <v-flex xs12 md6>
+        <v-flex xs12 md6 mt-1>
           <span>Theme</span>
           <v-switch primary label="Dark" v-model="theme.dark" color="accent"></v-switch>
         </v-flex>

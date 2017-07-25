@@ -1,6 +1,6 @@
 <template>
   <v-app
-    id="sandbox"
+    id="alex-website"
     :dark="theme.dark"
     :light="!theme.dark"
     standalone
@@ -33,6 +33,15 @@
   import Fab from './components/navigation/Fab.vue'
 
   export default {
+    computed: {
+      width () {
+        alert('test')
+        return document.documentElement.clientWidth
+      },
+      drawerType () {
+        return this.width > 992 ? 'permanent' : 'temporary'
+      }
+    },
     data: () => ({
       theme: {
         dark: true
@@ -51,7 +60,10 @@
       cards: [
         {
           title: "Welcome I'm Alex",
-          src: 'https://alex-ng.herokuapp.com/images/banner.jpg',
+          media: {
+            src: '/static/images/banner.jpg',
+            flex: 'xs12'
+          },
           flex: 12,
           showDetails: false,
           summary: 'Welcome to my portfolio website!',
@@ -63,7 +75,10 @@
         },
         {
           title: 'Projects',
-          src: 'https://alex-ng.herokuapp.com/images/projects/ignite/preview.png',
+          media: {
+            src: '/static/images/projects/ignite/preview.png',
+            flex: 'xs12'
+          },
           flex: 12,
           showDetails: false,
           summary: 'Check out some of my selected projects here on this site or on Github.',
@@ -78,7 +93,10 @@
         },
         {
           title: 'About me',
-          src: 'https://alex-ng.herokuapp.com/images/profile_pic_round.png',
+          media: {
+            src: '/static/images/profile_pic_round.png',
+            flex: 'xs12 md4 lg3'
+          },
           contain: true,
           flex: 12,
           showDetails: false,
@@ -94,7 +112,7 @@
               {label: 'Java', icon: 'computer', color: 'red'}
             ]
           },
-          actions: [{label: 'Details', link: '/about'}, {label: 'Resume', href: 'http://resume.alex-ng.com'}]
+          actions: [{label: 'Details', link: '/about'}, {label: 'Resume', href: '/static/documents/resume.pdf'}]
         },
         {
           title: 'Contact me',
@@ -121,11 +139,24 @@
 </script>
 
 <style lang="stylus">
-  #sandbox {
+  #alex-website {
     overflow: hidden;
-    margin-top: 45px;
   }
-  #sandbox .container, #sandbox {
+  /*
+  @media only screen and (min-width: 601px)
+  {
+    #alex-website {
+      margin-top: 56px;
+    }
+  }
+  @media only screen and (min-width: 1440px)
+  {
+    #alex-website {
+      margin-top: 64px;
+    }
+  }
+  */
+  #alex-website .container, #sandbox {
     /*min-height: 700px;*/
   }
   @import './stylus/main'

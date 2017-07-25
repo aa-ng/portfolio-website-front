@@ -1,5 +1,5 @@
 <template>
-  <v-layout row wrap>
+  <v-layout row wrap class="mt-5">
     <v-flex v-for="(card, i) in cards" v-if="i % 2 === 0" v-bind="{ [`sm${card.flex} xs12`]: true }">
       <v-flex
         :key="card.title"
