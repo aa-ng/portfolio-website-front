@@ -1,6 +1,12 @@
-# vuejs
+# Portfolio website
 
-> A Vue.js project
+[![Alex's portfolio website screenshot](https://alex-ng-beta.herokuapp.com/static/images/projects/portfolio-website/preview-small.png)](http://www.alex-ng.com)
+
+## Installation
+
+``` bash
+git clone https://github.com/CynicalBird/portfolio-website.git
+```
 
 ## Build Setup
 
@@ -16,6 +22,8 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
-```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+# run production 
+cd dist
+npm start
+```
