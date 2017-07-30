@@ -32,6 +32,21 @@
   import HeaderBar from './components/navigation/Header/HeaderBar.vue'
   import Fab from './components/navigation/Fab.vue'
 
+  /*
+   //import Firebase from 'firebase'
+  let config = {
+    apiKey: process.env.FIRE_API_KEY,
+    authDomain: process.env.FIRE_AUTH_DOM,
+    databaseURL: process.env.FIRE_BASE_URL,
+    storageBucket: process.env.FIRE_STORE_BUCK,
+    messagingSenderId: process.env.FIRE_MESSAGE_ID
+  }
+
+  let app = Firebase.initializeApp(config)
+  let db = app.database()
+  db.ref('books')
+  */
+
   export default {
     data: () => ({
       theme: {

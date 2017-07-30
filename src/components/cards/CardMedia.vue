@@ -37,5 +37,6 @@
 <style>
   div.card__media {
     height: 100%;
+    min-height: 200px;
   }
 </style>
