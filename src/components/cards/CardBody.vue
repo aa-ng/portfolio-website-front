@@ -8,7 +8,6 @@
 
 <script>
   import CardContent from './CardContent.vue'
-  import Chips from '../lists/Chips.vue'
 
   export default {
     props: {
@@ -18,8 +17,7 @@
       }
     },
     components: {
-      'alex-card-content': CardContent,
-      'alex-chips': Chips
+      'alex-card-content': CardContent
     }
   }
 </script>
