@@ -7,6 +7,7 @@
     :clipped="primaryDrawer.clipped"
     :floating="primaryDrawer.floating"
     :mini-variant="primaryDrawer.mini"
+    enable-resize-watcher
     overflow
   >
     <v-list dense>

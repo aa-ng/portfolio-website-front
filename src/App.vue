@@ -33,15 +33,6 @@
   import Fab from './components/navigation/Fab.vue'
 
   export default {
-    computed: {
-      width () {
-        alert('test')
-        return document.documentElement.clientWidth
-      },
-      drawerType () {
-        return this.width > 992 ? 'permanent' : 'temporary'
-      }
-    },
     data: () => ({
       theme: {
         dark: true
@@ -59,50 +50,60 @@
       },
       cards: [
         {
-          title: "Welcome I'm Alex",
           media: {
+            title: "Welcome I'm Alex",
             src: '/static/images/banner.jpg',
-            flex: 'xs12'
+            flex: 'xs12',
+            height: '200px'
           },
-          flex: 12,
-          showDetails: false,
-          summary: 'Welcome to my portfolio website!',
-          chips: [
-            {label: 'Web developer', icon: 'web', color: 'indigo'},
-            {label: 'Software developer', icon: 'code', color: 'light-blue'},
-            {label: 'Digital media enthusiast', icon: 'work', color: 'pink'}
-          ]
+          body: {
+            flex: 12,
+            title: "Welcome I'm Alex",
+            summary: 'Welcome to my portfolio website!',
+            chips: [
+              {label: 'Web developer', icon: 'web', color: 'indigo'},
+              {label: 'Software developer', icon: 'code', color: 'light-blue'},
+              {label: 'Digital media enthusiast', icon: 'work', color: 'pink'}
+            ]
+          }
         },
         {
-          title: 'Projects',
-          media: {
-            src: '/static/images/projects/ignite/preview.png',
-            flex: 'xs12'
-          },
-          flex: 12,
-          showDetails: false,
-          summary: 'Check out some of my selected projects here on this site or on Github.',
           actions: [{label: 'Details', link: '/projects'}, {label: 'Github', href: 'https://www.github.com/cynicalbird'}],
+          body: {
+            flex: 'xs12',
+            title: 'Projects',
+            summary: 'Check out some of my selected projects here on this site or on Github.'
+          },
           details: {
+            showDetails: false,
             buttons: [
               {label: 'Random maze generation', link: '/projects/mazeproject'},
               {label: 'Ignite', link: '/projects/ignite'},
               {label: 'Portfolio website', link: '/projects/webportfolio'}
             ]
+          },
+          media: {
+            title: 'Projects',
+            height: '200px',
+            src: '/static/images/projects/ignite/preview.png',
+            flex: 'xs12'
           }
         },
         {
-          title: 'About me',
+          body: {
+            flex: 'xs12 md8 lg9',
+            title: 'About me',
+            summary: 'Entering their 3rd year of Computer Science at Ryerson university Alex is strengthening their development portfolio, with new technologies and frameworks like VueJS, NodeJS and Firebase. Alex is also interested in the future of machine learning and data sciences.'
+          },
           media: {
+            title: 'About me',
+            contain: true,
             src: '/static/images/profile_pic_round.png',
             flex: 'xs12 md4 lg3'
           },
-          contain: true,
-          flex: 12,
-          showDetails: false,
-          summary: 'Entering their 3rd year of Computer Science at Ryerson university Alex is strengthening their development portfolio, with new technologies and frameworks like VueJS, NodeJS and Firebase. Alex is also interested in the future of machine learning and data sciences.',
           details: {
             title: 'Summary of skills',
+            showDetails: false,
             chips: [
               {label: 'NodeJS', icon: 'device_hub', color: 'green'},
               {label: 'VueJS', icon: 'pageview', color: 'teal'},
@@ -115,18 +116,20 @@
           actions: [{label: 'Details', link: '/about'}, {label: 'Resume', href: '/static/documents/resume.pdf'}]
         },
         {
-          title: 'Contact me',
-          form: [
-            {label: 'Name'},
-            {label: 'Email'},
-            {label: 'Message'}
-          ],
+          body: {
+            title: 'Contact me',
+            summary: 'Fields below are currently in maintenance, send me an email at: Alex.ng.personal@gmail.com',
+            form: [
+              {label: 'Name', required: true, model: ''},
+              {label: 'Email', required: true, model: ''},
+              {label: 'Message', required: true, model: '', multiline: true}
+            ]
+          },
           actions: [
             {label: 'LinkedIn', href: 'https://www.linkedin.com/in/alex-ng-130039134/?ppe=1'},
             {label: 'Github', href: 'https://github.com/CynicalBird'},
             {label: 'Email', href: 'mailto:alex.ng.personal@gmail.com'}
-          ],
-          flex: 12
+          ]
         }
       ]
     }),

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import PresentationCards from '../cards/homeCards/Cards.vue'
+  import BasicCards from '../cards/Cards.vue'
   export default {
     props: {
       cards: {
@@ -22,12 +22,12 @@
       }
     },
     components: {
-      'alex-presentation-cards': PresentationCards
+      'alex-presentation-cards': BasicCards
     }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .container { padding: 16px 10px; }
+  .container { padding: 16px 8px; }
 </style>
