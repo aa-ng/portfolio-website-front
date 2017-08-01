@@ -1,23 +1,25 @@
 <template>
   <v-card class="mb-1">
+    <alex-card-toolbar v-if="card.toolbar" :toolbar="card.toolbar"></alex-card-toolbar>
     <v-container>
       <v-layout row wrap>
         <!-- Card image -->
-        <alex-card-media :media="card.media"></alex-card-media>
+        <alex-card-media v-if="card" :media="card.media"></alex-card-media>
         <!-- Card body -->
-        <v-flex class="card-body" v-bind="{ [`${card.body.flex}`]: true }">
+        <v-flex class="card-body">
           <alex-card-body :body="card.body"></alex-card-body>
-          <v-divider v-if="card.actions"></v-divider>
+          <v-divider v-if="card && card.actions"></v-divider>
           <!-- Card actions -->
-          <alex-card-actions v-if="card.actions" :actions="card.actions" :details="card.details"></alex-card-actions>
+          <alex-card-actions v-if="card && card.actions" :actions="card.actions" :details="card.details"></alex-card-actions>
         </v-flex>
-        <alex-card-details v-if="card.details" :details="card.details"></alex-card-details>
+        <alex-card-details v-if="card && card.details" :details="card.details"></alex-card-details>
       </v-layout>
     </v-container>
   </v-card>
 </template>
 
 <script>
+  import CardToolbar from './CardToolbar.vue'
   import CardBody from './CardBody.vue'
   import CardMedia from './CardMedia.vue'
   import CardDetails from './CardDetails.vue'
@@ -26,11 +28,11 @@
   export default {
     props: {
       card: {
-        type: Object,
-        required: true
+        type: Object
       }
     },
     components: {
+      'alex-card-toolbar': CardToolbar,
       'alex-card-body': CardBody,
       'alex-card-media': CardMedia,
       'alex-card-actions': CardActions,

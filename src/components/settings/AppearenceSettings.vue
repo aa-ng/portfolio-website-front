@@ -4,7 +4,7 @@
       <v-layout row wrap>
         <v-flex xs12 md6 mt-1>
           <span>Theme</span>
-          <v-switch primary label="Dark" v-model="theme.dark" color="accent"></v-switch>
+          <v-switch primary :label="themeLabel" v-model="theme.dark" color="accent"></v-switch>
         </v-flex>
         <v-flex xs12 md6>
           <span>Drawer</span>
@@ -61,6 +61,11 @@
       theme: {
         type: Object,
         default: { dark: true }
+      }
+    },
+    computed: {
+      themeLabel () {
+        return this.theme.dark === true ? 'Dark' : 'Light'
       }
     }
   }

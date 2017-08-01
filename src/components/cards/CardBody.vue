@@ -1,7 +1,9 @@
 <template>
   <v-card-title>
     <div class="text-xs-center text-md-left card-content">
-      <alex-card-content :content="body"></alex-card-content>
+      <alex-card-content :content="body">
+        <slot></slot>
+      </alex-card-content>
     </div>
   </v-card-title>
 </template>
@@ -12,8 +14,7 @@
   export default {
     props: {
       body: {
-        type: Object,
-        required: true
+        type: Object
       }
     },
     components: {
