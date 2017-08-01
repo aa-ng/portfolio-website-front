@@ -3,6 +3,7 @@
     <v-progress-circular
       :size="progress.size"
       :rotate="-90"
+      width="15"
       :value="progress.value"
       class="info--text"
     >

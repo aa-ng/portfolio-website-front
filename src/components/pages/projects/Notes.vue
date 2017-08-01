@@ -19,7 +19,7 @@
     data () {
       return {
         maxNotes: 3,
-        currentNote: {label: 'Note', required: true, model: '', multiline: true},
+        currentNote: {label: 'Note', required: true, model: '', max: 110, multiline: true},
         notes: []
       }
     },
@@ -27,14 +27,17 @@
       saveNote () {
         console.log(this.currentNote.model.length > 0)
         if (this.currentNote.model.length > 0 && this.notes.length < this.maxNotes) {
-          this.notes.push({note: this.currentNote.model, model: false})
-          console.log(this.notes)
+          this.notes.push({note: this.currentNote.model, model: false, action: this.deleteNote})
           this.currentNote.model = ''
-          console.log('note saved')
         } else if (this.notes.length === this.maxNotes) {
           alert('Maximum note space exceeded')
         } else {
           alert('Can not save empty note')
+        }
+      },
+      deleteNote (tile) {
+        if (this.notes.length > 0) {
+          this.notes.splice((this.notes.indexOf(tile)), 1)
         }
       }
     },
