@@ -59,6 +59,7 @@
               flex: 12,
               title: 'Notes app',
               summary: 'Welcome to my notes app!',
+              textalign: 'text-xs-center',
               progress: this.progress
             }
           },

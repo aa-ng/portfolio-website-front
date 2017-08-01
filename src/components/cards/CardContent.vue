@@ -2,7 +2,7 @@
   <v-container>
     <span v-if="typeof content === 'string'">{{ content }}</span>
     <!-- Details objects -->
-    <div class="text-xs-center text-md-left" v-else>
+    <div :class="content.textalign | 'text-xs-center text-md-left'" v-else>
       <!-- Details title -->
       <span v-if="content.title" class="grey--text">{{ content.title }}</span><br v-if="content.title">
       <span v-if="content.summary">{{ content.summary }}</span><br v-if="content.summary">
