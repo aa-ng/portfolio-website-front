@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mb-1">
+  <v-card class="mb-1" :id="card.name">
     <alex-card-toolbar v-if="card.toolbar" :toolbar="card.toolbar"></alex-card-toolbar>
     <v-container>
       <v-layout row wrap>

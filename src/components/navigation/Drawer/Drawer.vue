@@ -10,6 +10,23 @@
     enable-resize-watcher
     overflow
   >
+    <v-toolbar flat class="transparent">
+      <v-list class="pa-0">
+        <v-list-tile avatar tag="div">
+          <v-list-tile-avatar>
+            <img src="/static/images/profile_pic_round.png" />
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Alex Ng</v-list-tile-title>
+          </v-list-tile-content>
+          <v-list-tile-action>
+            <v-btn icon @click.native="primaryDrawer.mini = !primaryDrawer.mini">
+              <v-icon>chevron_left</v-icon>
+            </v-btn>
+          </v-list-tile-action>
+        </v-list-tile>
+      </v-list>
+    </v-toolbar>
     <v-list dense>
       <alex-drawer-link v-for="drawerLink in drawerLinks" :drawerLink="drawerLink"></alex-drawer-link>
     </v-list>

@@ -37,7 +37,7 @@
             }
           },
           {
-            actions: [{label: 'Details', link: '/projects'}, {label: 'Github', href: 'https://www.github.com/cynicalbird'}],
+            actions: [{label: 'Details', link: '/projects'}],
             body: {
               flex: 'xs12',
               title: 'Projects',
@@ -46,9 +46,9 @@
             details: {
               showDetails: false,
               buttons: [
-                {label: 'Random maze generation', link: '/projects/mazeproject'},
-                {label: 'Ignite', link: '/projects/ignite'},
-                {label: 'Portfolio website', link: '/projects/webportfolio'}
+                {label: 'Random maze generation', link: '/projects#mazeproject'},
+                {label: 'Ignite', link: '/projects#ignite'},
+                {label: 'Portfolio website', link: '/projects#webportfolio'}
               ]
             },
             media: {
@@ -82,7 +82,7 @@
                 {label: 'Java', icon: 'computer', color: 'red'}
               ]
             },
-            actions: [{label: 'Details', link: '/about'}, {label: 'Resume', href: '/static/documents/resume.pdf'}]
+            actions: [{label: 'Details', link: '/about'}, {label: 'Resume', href: '/static/documents/resume.pdf', icon: 'assignment'}]
           },
           {
             body: {
@@ -101,10 +101,15 @@
               }
             },
             actions: [
-              {label: 'LinkedIn', href: 'https://www.linkedin.com/in/alex-ng-130039134/?ppe=1'},
-              {label: 'Github', href: 'https://github.com/CynicalBird'},
-              {label: 'Email', href: 'mailto:alex.ng.personal@gmail.com'}
-            ]
+              {label: 'LinkedIn', href: 'https://www.linkedin.com/in/alex-ng-130039134/?ppe=1', icon: 'link'},
+              {label: 'Github', href: 'https://github.com/CynicalBird', icon: 'link'}
+            ],
+            details: {
+              showDetails: false,
+              buttons: [
+                {label: 'Email', href: 'mailto:alex.ng.personal@gmail.com', icon: 'email'}
+              ]
+            }
           }
         ]
       }

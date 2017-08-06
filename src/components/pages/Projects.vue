@@ -19,6 +19,7 @@
       return {
         cards: [
           {
+            name: 'ignite',
             media: {
               title: 'Ignite - online web game',
               src: '/static/images/projects/ignite/preview.png',
@@ -27,12 +28,26 @@
             },
             body: {
               title: 'Ignite - online web game',
-              summary: 'A web game built using phaserjs',
+              summary: 'Operation ignition is a online web base real time multiplayer, RPG game. Ignite is played from a 2D top down camera, with dynamically generated terrain. (WIP) Our game encourages teamwork with 9 unique classes, guilds, and party system.',
               buttons: []
             },
-            actions: [{label: 'Go to ignite', href: 'http://ignite.zapto.org'}]
+            details: {
+              showDetails: false,
+              chips: [
+                {label: 'NodeJS', icon: 'device_hub', color: 'green'},
+                {label: 'AngularJS', icon: 'pageview', color: 'red'},
+                {label: 'SocketJS', icon: 'rss_feed', color: 'blue'},
+                {label: 'TravisCI', icon: 'rss_feed', color: 'amber'},
+                {label: 'PhaserJS', icon: 'videogame_asset', color: 'purple'}
+              ]
+            },
+            actions: [
+              {label: 'Go to ignite', href: 'http://ignite.zapto.org'},
+              {label: 'View on Github', href: 'http://ignite.zapto.org', icon: 'code'}
+            ]
           },
           {
+            name: 'mazeproject',
             media: {
               title: 'Random maze generation project',
               src: '/static/images/projects/maze-project/preview_full.png',
@@ -41,12 +56,22 @@
             },
             body: {
               title: 'Random maze generation project',
-              summary: 'A random maze generator and solver using the growing tree algorithm written in Java',
+              summary: 'My grade 12 Computer Science project featuring perfect maze random generation and a simple recursive backtracker solution. This project was written in Java using the growing tree algorithm. It also features many Object oriented programming techniques like inheritance and polymorphism.',
               buttons: []
             },
-            actions: [{label: 'View on github', href: 'https://github.com/CynicalBird/mazeproject'}, {label: 'Download Jar', href: 'https://github.com/CynicalBird/mazeproject/releases'}]
+            details: {
+              showDetails: false,
+              buttons: [
+                {label: 'More on perfect mazes', href: 'http://www.astrolog.org/labyrnth/algrithm.htm', icon: 'link'}
+              ]
+            },
+            actions: [
+              {label: 'View on github', href: 'https://github.com/CynicalBird/mazeproject', icon: 'code'},
+              {label: 'Download Jar', href: 'https://github.com/CynicalBird/mazeproject/releases', icon: 'cloud_download'}
+            ]
           },
           {
+            name: 'noteapp',
             media: {
               title: 'Note taking web app',
               color: 'accent',
@@ -59,10 +84,18 @@
             },
             body: {
               title: 'Note taking web app',
-              summary: 'A simple note taking app using VueJS - WIP',
-              buttons: []
+              summary: 'A simple note taking app using VueJS - WIP'
             },
-            actions: [{label: 'Go to note taking app', link: '/projects/webdev/notes'}]
+            details: {
+              showDetails: true,
+              chips: [
+                {label: 'NodeJS', icon: 'device_hub', color: 'green'},
+                {label: 'VueJS', icon: 'pageview', color: 'teal'}
+              ]
+            },
+            actions: [
+              {label: 'Go to note taking app', link: '/projects/webdev/notes', icon: 'link'}
+            ]
           }
         ]
       }
