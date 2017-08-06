@@ -61,6 +61,18 @@
         floating: false,
         mini: false
       },
+      fab: {
+        model: false,
+        left: false,
+        right: true,
+        up: false,
+        bottom: true,
+        direction: 'top',
+        fling: false,
+        hover: false,
+        tabs: null,
+        transition: 'slide-y-reverse-transition'
+      },
       footer: {
         fixed: false
       }

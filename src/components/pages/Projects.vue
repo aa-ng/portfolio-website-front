@@ -94,7 +94,7 @@
               ]
             },
             actions: [
-              {label: 'Go to note taking app', link: '/projects/webdev/notes', icon: 'link'}
+              {label: 'Go to note taking app', link: '/projects/webdev/notes'}
             ]
           }
         ]

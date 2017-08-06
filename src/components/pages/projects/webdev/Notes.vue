@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import Cards from '../../cards/Cards.vue'
+  import Cards from '../../../cards/Cards.vue'
 
   export default {
     data () {
@@ -45,6 +45,7 @@
       progress () {
         return {
           value: Math.floor(this.notes.length / this.maxNotes * 100),
+          width: 15,
           size: 100
         }
       },

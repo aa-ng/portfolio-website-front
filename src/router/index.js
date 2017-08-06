@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/pages/Home'
 import Projects from '@/components/pages/Projects'
-import Notes from '@/components/pages/projects/Notes'
+import Notes from '@/components/pages/projects/webdev/Notes'
 import Settings from '@/components/settings/AppearenceSettings.vue'
 
 Vue.use(Router)

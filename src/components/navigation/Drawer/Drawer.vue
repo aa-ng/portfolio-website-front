@@ -19,7 +19,7 @@
           <v-list-tile-content>
             <v-list-tile-title>Alex Ng</v-list-tile-title>
           </v-list-tile-content>
-          <v-list-tile-action>
+          <v-list-tile-action v-tooltip:bottom="{ html: 'shrink' }">
             <v-btn icon @click.native.stop="primaryDrawer.mini = !primaryDrawer.mini">
               <v-icon>chevron_left</v-icon>
             </v-btn>
@@ -28,10 +28,10 @@
       </v-list>
     </v-toolbar>
     <v-divider></v-divider>
-    <v-list dense>
+    <v-list two-line>
       <alex-drawer-link v-for="drawerLink in drawerLinks" :drawerLink="drawerLink"></alex-drawer-link>
       <v-list-tile v-if="primaryDrawer.mini">
-        <v-list-tile-action @click="primaryDrawer.mini = !primaryDrawer.mini">
+        <v-list-tile-action @click="primaryDrawer.mini = !primaryDrawer.mini" v-tooltip:top="{ html: 'expand' }">
           <v-icon>chevron_right</v-icon>
         </v-list-tile-action>
       </v-list-tile>

@@ -8,6 +8,7 @@
       <v-btn
         icon
         @click="details.showDetails = !details.showDetails"
+        v-tooltip:top="{ html: 'details' }"
       >
         <v-icon v-if="details">{{ details.showDetails ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
       </v-btn>

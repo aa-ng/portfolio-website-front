@@ -1,6 +1,6 @@
 # Portfolio website
 
-[![Alex's portfolio website screenshot](https://alex-ng-beta.herokuapp.com/static/images/projects/portfolio-website/preview-small.png)](http://www.alex-ng.com)
+[![Alex's portfolio website screenshot](https://alex-ng.herokuapp.com/static/images/projects/portfolio-website/preview-small.png)](http://www.alex-ng.com)
 
 ## Installation
 
