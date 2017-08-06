@@ -10,25 +10,31 @@
     enable-resize-watcher
     overflow
   >
-    <v-toolbar flat class="transparent">
+    <v-toolbar class="transparent" flat>
       <v-list class="pa-0">
         <v-list-tile avatar tag="div">
           <v-list-tile-avatar>
-            <img src="/static/images/profile_pic_round.png" />
+            <img src="/static/favicon.png" />
           </v-list-tile-avatar>
           <v-list-tile-content>
             <v-list-tile-title>Alex Ng</v-list-tile-title>
           </v-list-tile-content>
           <v-list-tile-action>
-            <v-btn icon @click.native="primaryDrawer.mini = !primaryDrawer.mini">
+            <v-btn icon @click.native.stop="primaryDrawer.mini = !primaryDrawer.mini">
               <v-icon>chevron_left</v-icon>
             </v-btn>
           </v-list-tile-action>
         </v-list-tile>
       </v-list>
     </v-toolbar>
+    <v-divider></v-divider>
     <v-list dense>
       <alex-drawer-link v-for="drawerLink in drawerLinks" :drawerLink="drawerLink"></alex-drawer-link>
+      <v-list-tile v-if="primaryDrawer.mini">
+        <v-list-tile-action @click="primaryDrawer.mini = !primaryDrawer.mini">
+          <v-icon>chevron_right</v-icon>
+        </v-list-tile-action>
+      </v-list-tile>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -45,7 +51,8 @@
           { icon: 'assignment', href: '/static/documents/resume.pdf', label: 'Resume' },
           { icon: 'face', link: '/about', label: 'About alex' },
           { icon: 'settings', link: '/settings', label: 'Settings' }
-        ]
+        ],
+        miniLink: { icon: 'chevron_right', click: 'primaryDrawer = !primaryDrawer', label: '' }
       }
     },
     props: {
