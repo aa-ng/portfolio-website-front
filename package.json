@@ -8,7 +8,7 @@
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
-    "deploy": "git subtree split --prefix dist origin master",
+    "deploy": "git push production `git subtree split --prefix dist master`:master --force",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
