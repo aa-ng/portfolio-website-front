@@ -1,6 +1,7 @@
 # Portfolio website
 
-<img alt="mobile screenshot" src="https://alex-ng.com/static/images/projects/portfolio-website/mobile-portrait.png" width="50%"/> <img alt="desktop preview" src="https://alex-ng.com/static/images/projects/portfolio-website/desktop-macbook.png" width="50%"/> 
+[![Alex's portfolio website mobile screenshot](http://alex-ng.com/static/images/projects/portfolio-website/mobile-portrait.png)](http://alex-ng.com)
+[![Alex's portfolio website desktop screenshot](http://alex-ng.com/static/images/projects/portfolio-website/desktop-macbook.png)](http://alex-ng.com)
 
 ## Installation
 
