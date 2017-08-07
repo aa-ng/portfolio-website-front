@@ -1,6 +1,6 @@
 # Portfolio website
 
-[![Alex's portfolio website screenshot](https://alex-ng.com/static/images/projects/portfolio-website/preview-small.png)](https://alex-ng.com)
+[![Alex's portfolio website screenshot](http://alex-ng.com/static/images/projects/portfolio-website/preview-small.png)](http://alex-ng.com)
 
 ## Installation
 
