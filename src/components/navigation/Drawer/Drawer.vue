@@ -14,7 +14,7 @@
       <v-list class="pa-0">
         <v-list-tile avatar tag="div">
           <v-list-tile-avatar>
-            <img src="/static/favicon.png" />
+            <img src="/favicon.png" />
           </v-list-tile-avatar>
           <v-list-tile-content>
             <v-list-tile-title>Alex Ng</v-list-tile-title>
