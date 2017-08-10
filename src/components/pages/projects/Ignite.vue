@@ -34,8 +34,7 @@
     },
     data () {
       return {
-        map: {},
-        googleMapsAPIKey: 'AIzaSyAyo7iLFKlttj6WVcQ-WoEil4NEm2z0kQI'
+        map: {}
       }
     },
     created () {
