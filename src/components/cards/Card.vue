@@ -1,13 +1,17 @@
 <template>
-  <v-card class="mb-1" :id="card.name">
+  <v-card class="mb-1 elevation-6">
     <alex-card-toolbar v-if="card.toolbar" :toolbar="card.toolbar"></alex-card-toolbar>
     <v-container>
       <v-layout row wrap>
         <!-- Card image -->
-        <alex-card-media v-if="card" :media="card.media"></alex-card-media>
+        <alex-card-media v-if="card.media" :media="card.media">
+          <slot name="media"></slot>
+        </alex-card-media>
         <!-- Card body -->
         <v-flex class="card-body">
-          <alex-card-body :body="card.body"></alex-card-body>
+          <alex-card-body :body="card.body || {}">
+            <slot></slot>
+          </alex-card-body>
           <v-divider v-if="card && card.actions"></v-divider>
           <!-- Card actions -->
           <alex-card-actions v-if="card && card.actions" :actions="card.actions" :details="card.details"></alex-card-actions>
@@ -28,7 +32,10 @@
   export default {
     props: {
       card: {
-        type: Object
+        type: Object,
+        default () {
+          return {}
+        }
       }
     },
     components: {

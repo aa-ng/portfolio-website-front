@@ -26,14 +26,6 @@
 </script>
 
 <style scoped>
-  div.layout.row.wrap {
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    column-count: 2;
-    -moz-column-gap: 1em;
-    -webkit-column-gap: 1em;
-    column-gap: 1em;
-  }
   div.flex.xs12 {
     display: inline-block;
     margin: 0 0 1em;

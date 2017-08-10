@@ -39,6 +39,9 @@
                 {label: 'SocketJS', icon: 'rss_feed', color: 'blue'},
                 {label: 'TravisCI', icon: 'rss_feed', color: 'amber'},
                 {label: 'PhaserJS', icon: 'videogame_asset', color: 'purple'}
+              ],
+              buttons: [
+                {label: 'Details', link: '/projects/ignite', icon: 'link'}
               ]
             },
             actions: [
@@ -61,6 +64,10 @@
             },
             details: {
               showDetails: false,
+              chips: [
+                {label: 'Java', icon: 'computer', color: 'red'},
+                {label: 'Growing tree algorithm', icon: 'call_split', color: 'green'}
+              ],
               buttons: [
                 {label: 'More on perfect mazes', href: 'http://www.astrolog.org/labyrnth/algrithm.htm', icon: 'link'}
               ]
@@ -87,9 +94,8 @@
               summary: 'A simple note taking app using VueJS - WIP'
             },
             details: {
-              showDetails: true,
+              showDetails: false,
               chips: [
-                {label: 'NodeJS', icon: 'device_hub', color: 'green'},
                 {label: 'VueJS', icon: 'pageview', color: 'teal'}
               ]
             },

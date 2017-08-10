@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/pages/Home'
 import Projects from '@/components/pages/Projects'
 import Notes from '@/components/pages/projects/webdev/Notes'
+import Ignite from '@/components/pages/projects/Ignite'
 import Settings from '@/components/settings/AppearenceSettings.vue'
 
 Vue.use(Router)
@@ -28,6 +29,11 @@ export default new Router({
       path: '/projects/webdev/notes',
       name: 'Note taking web app',
       component: Notes
+    },
+    {
+      path: '/projects/ignite',
+      name: 'Project Ignite',
+      component: Ignite
     }
   ],
   mode: 'history'
