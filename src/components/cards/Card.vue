@@ -4,11 +4,17 @@
     <v-container>
       <v-layout row wrap>
         <!-- Card image -->
-        <alex-card-media v-if="card.media" :media="card.media">
-          <slot name="media"></slot>
-        </alex-card-media>
+        <v-flex
+          v-if="card.media"
+          v-bind="{ [`${card.media.flex}`]: true }"
+          :style="'height: '+card.media.height"
+        >
+          <alex-card-media v-if="card.media" :media="card.media">
+            <slot name="media"></slot>
+          </alex-card-media>
+        </v-flex>
         <!-- Card body -->
-        <v-flex class="card-body">
+        <v-flex class="card-body" v-bind="{ [`${card.body.flex}`]: true }" xs12>
           <alex-card-body :body="card.body || {}">
             <slot></slot>
           </alex-card-body>

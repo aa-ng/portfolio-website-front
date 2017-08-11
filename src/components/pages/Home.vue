@@ -46,7 +46,7 @@
             details: {
               showDetails: false,
               buttons: [
-                {label: 'Random maze generation', link: '/projects#mazeproject'},
+                {label: 'Random maze gen', link: '/projects#mazeproject'},
                 {label: 'Ignite', link: '/projects#ignite'},
                 {label: 'Portfolio website', link: '/projects#webportfolio'}
               ]
@@ -80,9 +80,10 @@
                 {label: 'AJAX', icon: 'send', color: 'purple'},
                 {label: 'Git', icon: 'history', color: 'orange'},
                 {label: 'Java', icon: 'computer', color: 'red'}
-              ]
+              ],
+              buttons: [{label: 'Details', link: '/about'}]
             },
-            actions: [{label: 'Details', link: '/about'}, {label: 'Resume', href: '/static/documents/resume.pdf', icon: 'assignment'}]
+            actions: [{label: 'Resume', href: '/static/documents/resume.pdf', icon: 'assignment'}]
           },
           {
             body: {
@@ -101,8 +102,8 @@
               }
             },
             actions: [
-              {label: 'LinkedIn', href: 'https://www.linkedin.com/in/alex-ng-130039134/?ppe=1', icon: 'link'},
-              {label: 'Github', href: 'https://github.com/CynicalBird', icon: 'link'}
+              {label: 'Github', href: 'https://github.com/CynicalBird', icon: 'link'},
+              {label: 'LinkedIn', href: 'https://www.linkedin.com/in/alex-ng-130039134/?ppe=1', icon: 'link'}
             ],
             details: {
               showDetails: false,
