@@ -14,7 +14,7 @@
           </alex-card-media>
         </v-flex>
         <!-- Card body -->
-        <v-flex class="card-body" v-bind="{ [`${card.body.flex}`]: true }" xs12>
+        <v-flex class="card-body" v-bind="{ [`${card.body.flex}`] : true }" xs12>
           <alex-card-body :body="card.body || {}">
             <slot></slot>
           </alex-card-body>

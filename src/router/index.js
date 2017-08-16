@@ -5,6 +5,7 @@ import Projects from '@/components/pages/Projects'
 import Notes from '@/components/pages/projects/webdev/Notes'
 import Ignite from '@/components/pages/projects/Ignite'
 import Settings from '@/components/settings/AppearenceSettings.vue'
+import Admin from '@/components/pages/Admin.vue'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/projects/ignite',
       name: 'Project Ignite',
       component: Ignite
+    },
+    {
+      path: '/admin',
+      name: 'Admin',
+      component: Admin
     }
   ],
   mode: 'history'
