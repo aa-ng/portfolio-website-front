@@ -4,7 +4,14 @@
       <v-flex xs12 md10>
         <v-layout column>
           <v-container grid-list-lg fluid>
-            <v-layout row wrap class="mt-5">
+            <!-- Top spacer for header / toolbar -->
+            <v-layout class="mt-5"></v-layout>
+            <v-layout row v-if="error">
+              <v-flex xs12>
+                <alex-alert @dismissed="onDismissed" :message="error.message"></alex-alert>
+              </v-flex>
+            </v-layout>
+            <v-layout row wrap>
               <v-flex xs12>
                 <v-card class="white--text">
                   <v-toolbar class="primary" dark>
@@ -22,7 +29,7 @@
                         Log in
                       </v-tabs-item>
                       <v-tabs-item href="#tab-2">
-                        <v-icon>contacts</v-icon>
+                        <v-icon>person_add</v-icon>
                         Sign up
                       </v-tabs-item>
                     </v-tabs-bar>
@@ -50,6 +57,7 @@
 <script>
   import Signup from '../users/Signup.vue'
   import Login from '../users/Login.vue'
+
   export default {
     data () {
       return {
@@ -57,6 +65,29 @@
           email: '',
           password: '',
           confirmPassword: ''
+        }
+      }
+    },
+    methods: {
+      onDismissed () {
+        this.$store.dispatch('clearError')
+      }
+    },
+    computed: {
+      user () {
+        return this.$store.getters.user
+      },
+      error () {
+        return this.$store.getters.error
+      },
+      loading () {
+        return this.$store.getters.loading
+      }
+    },
+    watch: {
+      user (val) {
+        if (val !== null && val !== undefined) {
+          this.$router.push('/')
         }
       }
     },

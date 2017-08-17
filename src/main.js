@@ -5,8 +5,12 @@ import * as firebase from 'firebase'
 import router from './router'
 import { store } from './store'
 
+import Alert from './components/messages/alert.vue'
+
 Vue.use(Vuetify)
 Vue.config.productionTip = false
+
+Vue.component('alex-alert', Alert)
 
 const VueGoogleMaps = require('vue2-google-maps')
 
