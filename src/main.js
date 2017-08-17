@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import App from './App'
+import * as firebase from 'firebase'
 import router from './router'
+import { store } from './store'
 
 Vue.use(Vuetify)
 Vue.config.productionTip = false
@@ -20,5 +22,15 @@ Vue.use(VueGoogleMaps, {
 new Vue({
   el: '#app',
   router,
-  render: h => h(App)
+  store,
+  render: h => h(App),
+  created () {
+    firebase.initializeApp({
+      apiKey: 'AIzaSyAJsZeG6rybGNoUHwsmGbt7JDtRdQ4qjHw',
+      authDomain: 'alexngportfolio-fa355.firebaseapp.com',
+      databaseURL: 'https://alexngportfolio-fa355.firebaseio.com',
+      projectId: 'alexngportfolio-fa355',
+      storageBucket: ''
+    })
+  }
 })

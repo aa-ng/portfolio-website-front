@@ -51,7 +51,7 @@
           { icon: 'assignment', href: '/static/documents/resume.pdf', label: 'Resume' },
           { icon: 'face', link: '/about', label: 'About alex' },
           { icon: 'settings', link: '/settings', label: 'Settings' },
-          { icon: 'lock', link: '/admin', label: 'Auth' }
+          { icon: 'lock', link: '/admin', label: 'Admin' }
         ],
         miniLink: { icon: 'chevron_right', click: 'primaryDrawer = !primaryDrawer', label: '' }
       }
