@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import AppearenceSettings from '../settings/AppearenceSettings.vue'
+  import AppearenceSettings from '../settings/ThemeSettings.vue'
   export default {
     props: {
       primaryDrawer: {

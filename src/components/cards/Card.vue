@@ -6,15 +6,15 @@
         <!-- Card image -->
         <v-flex
           v-if="card.media"
-          v-bind="{ [`${card.media.flex}`]: true }"
-          :style="'height: '+card.media.height"
+          :class="cardMediaFlex"
+          :style="cardMediaHeight"
         >
           <alex-card-media v-if="card.media" :media="card.media">
             <slot name="media"></slot>
           </alex-card-media>
         </v-flex>
         <!-- Card body -->
-        <v-flex class="card-body" v-bind="{ [`${card.body.flex}`] : true }" xs12>
+        <v-flex class="card-body" :class="cardBodyFlex">
           <alex-card-body :body="card.body || {}">
             <slot></slot>
           </alex-card-body>
@@ -42,6 +42,17 @@
         default () {
           return {}
         }
+      }
+    },
+    computed: {
+      cardBodyFlex () {
+        return this.card.body.flex || 'xs12'
+      },
+      cardMediaFlex () {
+        return this.card.media.flex || 'xs12'
+      },
+      cardMediaHeight () {
+        return 'height: ' + (this.card.media.height || '200px')
       }
     },
     components: {

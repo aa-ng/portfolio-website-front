@@ -43,19 +43,6 @@
   import DrawerLink from './DrawerLink.vue'
 
   export default {
-    data () {
-      return {
-        drawerLinks: [
-          { icon: 'home', link: '/', label: 'Home Page' },
-          { icon: 'laptop', link: '/projects', label: 'My projects' },
-          { icon: 'assignment', href: '/static/documents/resume.pdf', label: 'Resume' },
-          { icon: 'face', link: '/about', label: 'About alex' },
-          { icon: 'settings', link: '/settings', label: 'Settings' },
-          { icon: 'lock', link: '/admin', label: 'Admin' }
-        ],
-        miniLink: { icon: 'chevron_right', click: 'primaryDrawer = !primaryDrawer', label: '' }
-      }
-    },
     props: {
       primaryDrawer: {
         type: Object,
@@ -66,6 +53,11 @@
           floating: false,
           mini: false
         }
+      }
+    },
+    computed: {
+      drawerLinks () {
+        return this.$store.getters.drawerLinks
       }
     },
     components: {

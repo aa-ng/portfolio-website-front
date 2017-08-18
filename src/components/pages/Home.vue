@@ -26,7 +26,7 @@
               height: '200px'
             },
             body: {
-              flex: 12,
+              flex: 'xs12',
               title: "Welcome I'm Alex",
               summary: 'Welcome to my portfolio website!',
               chips: [

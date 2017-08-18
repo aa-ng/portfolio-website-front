@@ -33,50 +33,20 @@
   import HeaderBar from './components/navigation/Header/HeaderBar.vue'
   import Fab from './components/navigation/Fab.vue'
 
-  /*
-   //import Firebase from 'firebase'
-  let config = {
-    apiKey: process.env.FIRE_API_KEY,
-    authDomain: process.env.FIRE_AUTH_DOM,
-    databaseURL: process.env.FIRE_BASE_URL,
-    storageBucket: process.env.FIRE_STORE_BUCK,
-    messagingSenderId: process.env.FIRE_MESSAGE_ID
-  }
-
-  let app = Firebase.initializeApp(config)
-  let db = app.database()
-  db.ref('books')
-  */
-
   export default {
     data: () => ({
-      theme: {
-        dark: true
-      },
-      drawers: ['Permanent', 'Persistent', 'Temporary'],
-      primaryDrawer: {
-        model: true,
-        type: 'persistent',
-        clipped: false,
-        floating: false,
-        mini: false
-      },
-      fab: {
-        model: false,
-        left: false,
-        right: true,
-        up: false,
-        bottom: true,
-        direction: 'top',
-        fling: false,
-        hover: false,
-        tabs: null,
-        transition: 'slide-y-reverse-transition'
-      },
-      footer: {
-        fixed: false
-      }
     }),
+    computed: {
+      primaryDrawer () {
+        return this.$store.getters.primaryDrawer
+      },
+      theme () {
+        return this.$store.getters.theme
+      },
+      footer () {
+        return this.$store.getters.footer
+      }
+    },
     components: {
       'alex-drawer': Drawer,
       'alex-header': HeaderBar,
