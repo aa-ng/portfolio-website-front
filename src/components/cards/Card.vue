@@ -5,11 +5,10 @@
       <v-layout row wrap>
         <!-- Card image -->
         <v-flex
-          v-if="card.media"
           :class="cardMediaFlex"
           :style="cardMediaHeight"
         >
-          <alex-card-media v-if="card.media" :media="card.media">
+          <alex-card-media :media="card.media">
             <slot name="media"></slot>
           </alex-card-media>
         </v-flex>
@@ -49,10 +48,10 @@
         return this.card.body.flex || 'xs12'
       },
       cardMediaFlex () {
-        return this.card.media.flex || 'xs12'
+        return this.card.media ? this.card.media.flex || 'xs12' : 'xs12'
       },
       cardMediaHeight () {
-        return 'height: ' + (this.card.media.height || '200px')
+        return this.card.media ? 'height: ' + (this.card.media.height || '200px') : '200px'
       }
     },
     components: {

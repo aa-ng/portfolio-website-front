@@ -34,8 +34,6 @@
   import Fab from './components/navigation/Fab.vue'
 
   export default {
-    data: () => ({
-    }),
     computed: {
       primaryDrawer () {
         return this.$store.getters.primaryDrawer
@@ -45,6 +43,9 @@
       },
       footer () {
         return this.$store.getters.footer
+      },
+      drawers () {
+        return this.$store.getters.drawers
       }
     },
     components: {
