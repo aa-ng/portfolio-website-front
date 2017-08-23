@@ -35,8 +35,10 @@ export const store = new Vuex.Store({
       {
         media: {
           title: "Welcome I'm Alex",
-          src: '/static/images/banner.jpg',
+          src: '/static/images/projects/ru-fighter/alex.png',
           flex: 'xs12',
+          color: 'accent',
+          contain: true,
           height: '200px'
         },
         body: {

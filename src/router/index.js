@@ -24,7 +24,14 @@ export default new Router({
     {
       path: '/projects',
       name: 'Projects',
-      component: Projects
+      component: Projects,
+      children: [
+        {
+          path: ':name',
+          props: true
+        }
+
+      ]
     },
     {
       path: '/projects/webdev/notes',
