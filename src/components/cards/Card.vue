@@ -7,6 +7,7 @@
         <v-flex
           :class="cardMediaFlex"
           :style="cardMediaHeight"
+          style="position: relative"
         >
           <alex-card-media :media="card.media">
             <slot name="media"></slot>
