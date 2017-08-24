@@ -1,11 +1,38 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/pages/Home'
-import Projects from '@/components/pages/Projects'
-import Notes from '@/components/pages/projects/webdev/Notes'
-import Ignite from '@/components/pages/projects/Ignite'
-import Settings from '@/components/settings/ThemeSettings.vue'
-import Admin from '@/components/pages/Admin.vue'
+
+/* Lazy loading routes below */
+
+const Projects = resolve => {
+  require.ensure(['@/components/pages/Projects'], () => {
+    resolve(require('@/components/pages/Projects'))
+  }, 'projects')
+}
+
+const Notes = resolve => {
+  require.ensure(['@/components/pages/projects/webdev/Notes'], () => {
+    resolve(require('@/components/pages/projects/webdev/Notes'))
+  }, 'projects')
+}
+
+const Ignite = resolve => {
+  require.ensure(['@/components/pages/projects/Ignite'], () => {
+    resolve(require('@/components/pages/projects/Ignite'))
+  }, 'projects')
+}
+
+const Settings = resolve => {
+  require.ensure(['@/components/settings/ThemeSettings.vue'], () => {
+    resolve(require('@/components/settings/ThemeSettings.vue'))
+  }, 'projects')
+}
+
+const Admin = resolve => {
+  require.ensure(['@/components/pages/Admin.vue'], () => {
+    resolve(require('@/components/pages/Admin.vue'))
+  }, 'admin')
+}
 
 Vue.use(Router)
 
