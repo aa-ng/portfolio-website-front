@@ -84,7 +84,7 @@ export const store = new Vuex.Store({
           title: 'About me',
           contain: true,
           src: '/static/images/profile_pic_round.png',
-          flex: 'xs12 md4 lg3'
+          flex: 'xs12 md3'
         },
         details: {
           title: 'Summary of skills',

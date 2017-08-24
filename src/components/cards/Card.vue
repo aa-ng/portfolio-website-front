@@ -51,7 +51,13 @@
         return this.card.media ? this.card.media.flex || 'xs12' : 'xs12'
       },
       cardMediaHeight () {
-        return this.card.media ? 'height: ' + (this.card.media.height || '200px') : '200px'
+        return this.card.media ? 'min-height: ' + (this.card.media.height || '200px') : '200px'
+      }
+    },
+    watch: {
+      cardBodyHeight (value) {
+        alert(value)
+        return value
       }
     },
     components: {
