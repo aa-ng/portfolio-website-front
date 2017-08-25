@@ -1,21 +1,18 @@
 <template>
   <div
     v-if="media"
-    data-v-327d98b3=""
-    class="card__media"
-    :class="classes"
-    style="height: 100%; position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px;">
+    :class="mediaClasses + ' card__media'"
+    :style="mediaStyle">
     <div
       class="card__media__background"
-      :style="'background-image:' + backgroundSource + ' background-size: ' + backgroundSize"
-      style="background-size: cover; background-position: center center; background-repeat: no-repeat no-repeat;"
+      :style="mediaBackgroundStyle"
     ></div>
     <div class="card__media__content">
       <v-container fill-height fluid>
         <v-layout fill-height pa-1>
 
           <v-flex v-if="source" xs12 align-end flexbox :style="mediaTitleStyle">
-            <span class="headline ml-2 white--text">{{ media.title }}</span>
+            <span :class="mediaTextClasses">{{ media.title }}</span>
           </v-flex>
 
           <v-container
@@ -28,7 +25,7 @@
             <v-icon dark :class="iconSize">
               {{ media.icon.name }}
             </v-icon>
-            <p class="headline ml-2 white--text">{{ media.title }}</p>
+            <p :class="mediaTextClasses">{{ media.title }}</p>
           </v-container>
 
         </v-layout>
@@ -44,8 +41,21 @@
         type: Object
       }
     },
+    data () {
+      return {
+        mediaStyle: {
+          height: 100 + '%',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0
+        },
+        mediaTextClasses: 'headline ml-2 white--text'
+      }
+    },
     computed: {
-      classes () {
+      mediaClasses () {
         return this.media ? this.media.color || 'primary' : 'accent'
       },
       source () {
@@ -61,18 +71,18 @@
         return this.media ? 'icon--' + this.media.icon.size || 'icon--x-large' : ''
       },
       backgroundSource () {
-        return 'url(' + this.source + ');'
+        return 'url("' + this.source + '")'
       },
       backgroundSize () {
         return this.contained ? 'contain' : 'cover'
       },
-      mediaStyle () {
-        /*
-        background-image: url(' + source + ');
-         */
-        // as of now this currently is hardcoded to support the second flex size
+      mediaBackgroundStyle () {
+        console.log(this.backgroundSource)
         return {
-          'background-image': this.background
+          'background-image': this.backgroundSource,
+          'background-size': this.backgroundSize,
+          'background-position': 'center center',
+          'background-repeat': 'no-repeat no-repeat'
         }
       },
       mediaTitleStyle () {
