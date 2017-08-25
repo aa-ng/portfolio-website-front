@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  import DetailsButton from '../input/DetailsButton.vue'
+  import DetailsButton from '../input/Actions.vue'
   export default {
     props: {
       actions: {

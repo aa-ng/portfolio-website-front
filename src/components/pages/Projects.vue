@@ -22,7 +22,7 @@
             name: 'ignite',
             media: {
               title: 'Ignite - online web game',
-              src: '/static/images/projects/ignite/preview.png',
+              src: '/static/images/projects/ignite/preview-min.png',
               flex: 'xs12',
               height: '200px'
             },
@@ -53,7 +53,7 @@
             name: 'mazeproject',
             media: {
               title: 'Random maze generation project',
-              src: '/static/images/projects/maze-project/preview_full.png',
+              src: '/static/images/projects/maze-project/preview-full-min.png',
               flex: 'xs12',
               height: '200px'
             },

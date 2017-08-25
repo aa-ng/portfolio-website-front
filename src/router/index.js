@@ -1,8 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/pages/Home'
 
-/* Lazy loading routes below */
+/* Lazy loading routes */
+
+const Home = resolve => {
+  require.ensure(['@/components/pages/Home'], () => {
+    resolve(require('@/components/pages/Home'))
+  }, 'home')
+}
 
 const Projects = resolve => {
   require.ensure(['@/components/pages/Projects'], () => {

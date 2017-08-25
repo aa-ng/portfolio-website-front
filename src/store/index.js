@@ -18,7 +18,8 @@ export const store = new Vuex.Store({
       { icon: 'lock', link: '/admin', label: 'Admin' }
     ],
     theme: {
-      dark: true
+      dark: true,
+      actionColor: 'info'
     },
     drawers: ['Permanent', 'Persistent', 'Temporary'],
     primaryDrawer: {
@@ -70,7 +71,7 @@ export const store = new Vuex.Store({
         media: {
           title: 'Projects',
           height: '200px',
-          src: '/static/images/projects/ignite/preview.png',
+          src: '/static/images/projects/ignite/preview-min.png',
           flex: 'xs12'
         }
       },
@@ -83,7 +84,7 @@ export const store = new Vuex.Store({
         media: {
           title: 'About me',
           contain: true,
-          src: '/static/images/profile_pic_round.png',
+          src: '/static/images/profile-pic-round-min.png',
           flex: 'xs12 md4 lg3'
         },
         details: {
@@ -96,10 +97,12 @@ export const store = new Vuex.Store({
             {label: 'AJAX', icon: 'send', color: 'purple'},
             {label: 'Git', icon: 'history', color: 'orange'},
             {label: 'Java', icon: 'computer', color: 'red'}
-          ],
-          buttons: [{label: 'Details', link: '/about'}]
+          ]
         },
-        actions: [{label: 'Resume', href: '/static/documents/resume.pdf', icon: 'assignment'}]
+        actions: [
+          {label: 'Details', link: '/about'},
+          {label: 'Resume', href: '/static/documents/resume.pdf', icon: 'assignment'}
+        ]
       },
       {
         body: {
@@ -118,15 +121,10 @@ export const store = new Vuex.Store({
           }
         },
         actions: [
-          {label: 'Github', href: 'https://github.com/CynicalBird', icon: 'link'},
-          {label: 'LinkedIn', href: 'https://www.linkedin.com/in/alex-ng-130039134/?ppe=1', icon: 'link'}
-        ],
-        details: {
-          showDetails: false,
-          buttons: [
-            {label: 'Email', href: 'mailto:alex.ng.personal@gmail.com', icon: 'email'}
-          ]
-        }
+          {label: 'Github', href: 'https://github.com/aa-ng', icon: 'link'},
+          {label: 'LinkedIn', href: 'https://www.linkedin.com/in/alex-ng-130039134/?ppe=1', icon: 'link'},
+          {label: 'Email', href: 'mailto:alex.ng.personal@gmail.com', icon: 'email'}
+        ]
       }
     ]
   },

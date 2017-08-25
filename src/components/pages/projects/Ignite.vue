@@ -7,15 +7,6 @@
             <v-layout row wrap class="mt-5">
               <alex-card>
                 <h1>Hello world</h1>
-                <div id="map">
-                  <gmap-map :center="{lat:1.38, lng:103.8}" :zoom="12">
-                    <gmap-marker :position="{lat:1.38, lng:103.8}">
-                    </gmap-marker>
-                    <gmap-info-window :position="{lat:1.38, lng:103.8}">
-                      Hello world!
-                    </gmap-info-window>
-                  </gmap-map>
-                </div>
               </alex-card>
             </v-layout>
           </v-container>
