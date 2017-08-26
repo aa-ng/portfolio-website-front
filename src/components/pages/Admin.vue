@@ -5,7 +5,6 @@
         <v-layout column>
           <v-container grid-list-lg fluid>
             <!-- Top spacer for header / toolbar -->
-            <v-layout class="mt-5"></v-layout>
             <v-layout row v-if="error">
               <v-flex xs12>
                 <alex-alert @dismissed="onDismissed" :message="error.message"></alex-alert>

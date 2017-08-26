@@ -5,10 +5,10 @@
     :light="!theme.dark"
     standalone
   >
+    <alex-drawer :primaryDrawer="primaryDrawer"></alex-drawer>
     <alex-header
       :primaryDrawer="primaryDrawer"
     ></alex-header>
-    <alex-drawer :primaryDrawer="primaryDrawer"></alex-drawer>
     <main>
       <keep-alive>
         <router-view

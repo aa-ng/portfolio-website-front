@@ -1,5 +1,5 @@
 <template>
-  <v-container class="mt-6">
+  <v-container>
     <v-layout align-center justify-center row wrap>
       <v-flex xs12 md10>
         <v-layout column>
