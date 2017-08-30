@@ -21,6 +21,12 @@ const Notes = resolve => {
   }, 'projects')
 }
 
+const SvgAnim = resolve => {
+  require.ensure(['@/components/pages/projects/webdev/SvgAnimation'], () => {
+    resolve(require('@/components/pages/projects/webdev/SvgAnimation'))
+  }, 'projects')
+}
+
 const Ignite = resolve => {
   require.ensure(['@/components/pages/projects/Ignite'], () => {
     resolve(require('@/components/pages/projects/Ignite'))
@@ -69,6 +75,11 @@ export default new Router({
       path: '/projects/webdev/notes',
       name: 'Note taking web app',
       component: Notes
+    },
+    {
+      path: '/projects/webdev/svg-animation',
+      name: 'svgAnim',
+      component: SvgAnim
     },
     {
       path: '/projects/ignite',

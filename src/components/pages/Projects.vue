@@ -101,7 +101,8 @@
               ]
             },
             actions: [
-              {label: 'Go to note taking app', link: '/projects/webdev/notes'}
+              {label: 'Go to note taking app', link: '/projects/webdev/notes'},
+              {label: 'View on github', href: 'https://github.com/aa-ng/portfolio-website-front/blob/master/src/components/pages/projects/webdev/Notes.vue', icon: 'code'}
             ]
           },
           {
@@ -130,7 +131,8 @@
               ]
             },
             actions: [
-              {label: 'Go to stock trading app', href: 'https://alex-stock-trading.herokuapp.com'}
+              {label: 'Go to stock trading app', href: 'https://alex-stock-trading.herokuapp.com'},
+              {label: 'View on github', href: 'https://github.com/aa-ng/StockTrader', icon: 'code'}
             ]
           }
         ]
@@ -141,3 +143,7 @@
     }
   }
 </script>
+
+<style scoped>
+  .container { padding: 16px 8px; }
+</style>

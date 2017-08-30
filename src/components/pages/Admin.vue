@@ -108,3 +108,7 @@
     }
   }
 </script>
+
+<style scoped>
+  .container { padding: 16px 8px; }
+</style>
