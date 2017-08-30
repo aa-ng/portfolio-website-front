@@ -10,6 +10,7 @@
       :primaryDrawer="primaryDrawer"
     ></alex-header>
     <main>
+      <alex-loading v-if="loading"></alex-loading>
       <keep-alive>
         <router-view
           :primaryDrawer="primaryDrawer"
@@ -29,29 +30,27 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
   import Drawer from './components/navigation/Drawer/Drawer.vue'
   import HeaderBar from './components/navigation/Header/HeaderBar.vue'
   import Fab from './components/navigation/Fab.vue'
+  import Loading from './components/progress/Loading.vue'
 
   export default {
     computed: {
-      primaryDrawer () {
-        return this.$store.getters.primaryDrawer
-      },
-      theme () {
-        return this.$store.getters.theme
-      },
-      footer () {
-        return this.$store.getters.footer
-      },
-      drawers () {
-        return this.$store.getters.drawers
-      }
+      ...mapGetters([
+        'loading',
+        'primaryDrawer',
+        'theme',
+        'footer',
+        'drawers'
+      ])
     },
     components: {
       'alex-drawer': Drawer,
       'alex-header': HeaderBar,
-      'alex-fab': Fab
+      'alex-fab': Fab,
+      'alex-loading': Loading
     }
   }
 </script>

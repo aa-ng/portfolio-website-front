@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar dark class="primary elevation-6" fixed>
+  <v-toolbar dark class="primary elevation-6" fixed style="z-index: 900;">
     <v-toolbar-side-icon
       @click.stop="primaryDrawer.model = !primaryDrawer.model"
       v-if="primaryDrawer.type !== 'permanent'"

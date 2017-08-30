@@ -11,6 +11,15 @@ Vue.config.productionTip = false
 
 Vue.component('alex-alert', Alert)
 
+router.beforeEach((to, from, next) => {
+  store.commit('setLoading', true)
+  next()
+})
+
+router.afterEach(() => {
+  store.commit('setLoading', false)
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

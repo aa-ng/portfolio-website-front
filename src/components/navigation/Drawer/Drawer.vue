@@ -9,6 +9,7 @@
     :mini-variant="primaryDrawer.mini"
     enable-resize-watcher
     overflow
+    style="z-index: 1000;"
   >
     <v-toolbar class="transparent" flat>
       <v-list class="pa-0">
@@ -27,7 +28,6 @@
         </v-list-tile>
       </v-list>
     </v-toolbar>
-    <v-divider></v-divider>
     <v-list two-line>
       <alex-drawer-link v-for="drawerLink in drawerLinks" :drawerLink="drawerLink"></alex-drawer-link>
       <v-list-tile v-if="primaryDrawer.mini">

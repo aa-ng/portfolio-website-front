@@ -54,6 +54,7 @@
 </template>
 
 <script>
+  import * as firebase from 'firebase'
   import Signup from '../users/Signup.vue'
   import Login from '../users/Login.vue'
 
@@ -93,6 +94,17 @@
     components: {
       'alex-sign-up': Signup,
       'alex-login': Login
+    },
+    created () {
+      var config = {
+        apiKey: 'AIzaSyAJsZeG6rybGNoUHwsmGbt7JDtRdQ4qjHw',
+        authDomain: 'alexngportfolio-fa355.firebaseapp.com',
+        databaseURL: 'https://alexngportfolio-fa355.firebaseio.com',
+        projectId: 'alexngportfolio-fa355',
+        storageBucket: 'alexngportfolio-fa355.appspot.com',
+        messagingSenderId: '142299163371'
+      }
+      firebase.initializeApp(config)
     }
   }
 </script>
