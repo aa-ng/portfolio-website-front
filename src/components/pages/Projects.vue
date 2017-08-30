@@ -66,6 +66,7 @@
               showDetails: false,
               chips: [
                 {label: 'Java', icon: 'computer', color: 'red'},
+                {label: 'OOP', icon: 'extension', color: 'blue'},
                 {label: 'Growing tree algorithm', icon: 'call_split', color: 'green'}
               ],
               buttons: [
@@ -75,6 +76,37 @@
             actions: [
               {label: 'View on github', href: 'https://github.com/CynicalBird/mazeproject', icon: 'code'},
               {label: 'Download Jar', href: 'https://github.com/CynicalBird/mazeproject/releases', icon: 'cloud_download'}
+            ]
+          },
+          {
+            name: 'stock-trader-app',
+            media: {
+              title: 'Stock trader web app',
+              color: 'secondary',
+              icon: {
+                size: 'x-large',
+                name: 'swap_horiz'
+              },
+              flex: 'xs12',
+              height: '200px'
+            },
+            body: {
+              title: 'Stock trader web app',
+              summary: 'You can buy and sell stocks - App is hosted with Heroku free dynos first loads may be slower than expected.'
+            },
+            details: {
+              showDetails: false,
+              chips: [
+                {label: 'VueJS', icon: 'pageview', color: 'teal'},
+                {label: 'Animations', icon: 'directions_run', color: 'orange'},
+                {label: 'Vuex', icon: 'memory', color: 'light-blue'},
+                {label: 'Vuetify', icon: 'star', color: 'blue'},
+                {label: 'Heroku', icon: 'cloud', color: 'purple'}
+              ]
+            },
+            actions: [
+              {label: 'Go to stock trading app', href: 'https://alex-stock-trading.herokuapp.com'},
+              {label: 'View on github', href: 'https://github.com/aa-ng/StockTrader', icon: 'code'}
             ]
           },
           {
@@ -97,7 +129,8 @@
               showDetails: false,
               chips: [
                 {label: 'VueJS', icon: 'pageview', color: 'teal'},
-                {label: 'Animations', icon: 'directions_run', color: 'orange'}
+                {label: 'Animations', icon: 'directions_run', color: 'orange'},
+                {label: 'Vuetify', icon: 'star', color: 'blue'}
               ]
             },
             actions: [
@@ -106,33 +139,23 @@
             ]
           },
           {
-            name: 'stock-trader-app',
+            name: 'SvgAnimation',
             media: {
-              title: 'Stock trader web app',
-              color: 'secondary',
+              title: 'SVG Animation',
               icon: {
                 size: 'x-large',
-                name: 'swap_horiz'
+                name: 'border_color'
               },
               flex: 'xs12',
               height: '200px'
             },
             body: {
-              title: 'Stock trader web app',
-              summary: 'You can buy and sell stocks - WIP'
-            },
-            details: {
-              showDetails: false,
-              chips: [
-                {label: 'VueJS', icon: 'pageview', color: 'teal'},
-                {label: 'Animations', icon: 'directions_run', color: 'orange'},
-                {label: 'Vuex', icon: 'memory', color: 'light-blue'},
-                {label: 'Vuetify', icon: 'star', color: 'blue'}
-              ]
+              title: 'SVG Animation / Manipulation',
+              summary: 'Adding animations to a SVG image'
             },
             actions: [
-              {label: 'Go to stock trading app', href: 'https://alex-stock-trading.herokuapp.com'},
-              {label: 'View on github', href: 'https://github.com/aa-ng/StockTrader', icon: 'code'}
+              {label: 'View', link: '/projects/webdev/svg-animation'},
+              {label: 'View on github', href: 'https://github.com/aa-ng/portfolio-website-front/blob/master/static/images/logos/chrome.svg?short_path=af42474#L6-L38', icon: 'code'}
             ]
           }
         ]
