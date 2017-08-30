@@ -7,7 +7,7 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
   state: {
     user: null,
-    loading: false,
+    loading: true,
     error: null,
     drawerLinks: [
       { icon: 'home', link: '/', label: 'Home Page' },

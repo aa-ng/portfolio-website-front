@@ -16,10 +16,6 @@ router.beforeEach((to, from, next) => {
   next()
 })
 
-router.afterEach(() => {
-  store.commit('setLoading', false)
-})
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

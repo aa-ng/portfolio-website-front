@@ -11,7 +11,7 @@
     overflow
     style="z-index: 1000;"
   >
-    <v-toolbar class="transparent" flat>
+    <v-toolbar class="transparent" flat prominent>
       <v-list class="pa-0">
         <v-list-tile avatar tag="div">
           <v-list-tile-avatar>
@@ -28,6 +28,7 @@
         </v-list-tile>
       </v-list>
     </v-toolbar>
+    <v-divider></v-divider>
     <v-list two-line>
       <alex-drawer-link v-for="drawerLink in drawerLinks" :drawerLink="drawerLink"></alex-drawer-link>
       <v-list-tile v-if="primaryDrawer.mini">
