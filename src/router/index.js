@@ -51,17 +51,17 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
+      name: 'home',
       component: Home
     },
     {
       path: '/settings',
-      name: 'Settings',
+      name: 'settings',
       component: Settings
     },
     {
       path: '/projects',
-      name: 'Projects',
+      name: 'projects',
       component: Projects,
       children: [
         {
@@ -73,7 +73,7 @@ export default new Router({
     },
     {
       path: '/projects/webdev/notes',
-      name: 'Note taking web app',
+      name: 'noteTakingWebApp',
       component: Notes
     },
     {
@@ -83,13 +83,17 @@ export default new Router({
     },
     {
       path: '/projects/ignite',
-      name: 'Project Ignite',
+      name: 'projectIgnite',
       component: Ignite
     },
     {
       path: '/admin',
-      name: 'Admin',
+      name: 'admin',
       component: Admin
+    },
+    {
+      path: '*',
+      redirect: {name: 'home'}
     }
   ],
   mode: 'history'
