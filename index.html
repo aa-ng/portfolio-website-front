@@ -28,6 +28,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+    <link rel="stylesheet" href="/static/stylesheets/pageLoad.css">
     <!-- Microsoft windows tile colors -->
     <meta name="msapplication-TileColor" content="#c2185b">
     <!-- ios safari status bar color -->
@@ -66,7 +67,12 @@
       }
     }(window.location))
   </script>
-    <div id="app"></div>
+    <div id="app">
+      <div class="logo-container">
+        <img src="/static/images/logos/logo.png" alt="alex logo" class="logo">
+        <h3 class="loading-text">Now loading...</h3>
+      </div>
+    </div>
     <!-- built files will be auto injected -->
   </body>
 </html>
