@@ -5,20 +5,18 @@
     :light="!theme.dark"
     standalone
   >
+    <alex-loading v-if="loading"></alex-loading>
     <alex-drawer :primaryDrawer="primaryDrawer"></alex-drawer>
     <alex-header
       :primaryDrawer="primaryDrawer"
     ></alex-header>
     <main>
-      <alex-loading v-if="loading"></alex-loading>
-      <keep-alive>
-        <router-view
-          :primaryDrawer="primaryDrawer"
-          :drawers="drawers"
-          :footer="footer"
-          :theme="theme"
-        ></router-view>
-      </keep-alive>
+      <router-view
+        :primaryDrawer="primaryDrawer"
+        :drawers="drawers"
+        :footer="footer"
+        :theme="theme"
+      ></router-view>
     </main>
     <!--<alex-fab></alex-fab>-->
     <v-footer

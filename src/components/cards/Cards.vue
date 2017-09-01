@@ -12,6 +12,7 @@
 
 <script>
   import PresentationCard from './Card.vue'
+  import * as ScrollReveal from 'scrollreveal'
   export default {
     props: {
       cards: {
@@ -21,6 +22,18 @@
     },
     components: {
       'alex-presentation-card': PresentationCard
+    },
+    mounted () {
+      var sr = ScrollReveal({ reset: true })
+      sr.reveal('.card', {
+        duration: 200,
+        delay: 250,
+        scale: 0.9,
+        easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+        mobile: true,
+        useDelay: 'once',
+        opacity: 0
+      })
     }
   }
 </script>

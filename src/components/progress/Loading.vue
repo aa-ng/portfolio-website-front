@@ -1,5 +1,5 @@
 <template>
-  <v-progress-linear :indeterminate="true" style="position: fixed; margin: 0; z-index: 50;"></v-progress-linear>
+  <v-progress-linear secondary :indeterminate="true" style="position: fixed; margin: 0; z-index: 9000;"></v-progress-linear>
 </template>
 
 <script>
