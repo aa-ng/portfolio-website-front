@@ -24,10 +24,10 @@
       'alex-presentation-card': PresentationCard
     },
     mounted () {
-      var sr = ScrollReveal({ reset: true })
+      var sr = ScrollReveal({ reset: false })
       sr.reveal('.card', {
         duration: 200,
-        delay: 250,
+        delay: 100,
         scale: 0.9,
         easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
         mobile: true,

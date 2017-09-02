@@ -101,6 +101,7 @@
                 {label: 'Animations', icon: 'directions_run', color: 'orange'},
                 {label: 'Vuex', icon: 'memory', color: 'light-blue'},
                 {label: 'Vuetify', icon: 'star', color: 'blue'},
+                {label: 'Local Storage', icon: 'save', color: 'indigo'},
                 {label: 'Heroku', icon: 'cloud', color: 'purple'}
               ]
             },
@@ -130,7 +131,8 @@
               chips: [
                 {label: 'VueJS', icon: 'pageview', color: 'teal'},
                 {label: 'Animations', icon: 'directions_run', color: 'orange'},
-                {label: 'Vuetify', icon: 'star', color: 'blue'}
+                {label: 'Vuetify', icon: 'star', color: 'blue'},
+                {label: 'Local Storage', icon: 'save', color: 'indigo'}
               ]
             },
             actions: [

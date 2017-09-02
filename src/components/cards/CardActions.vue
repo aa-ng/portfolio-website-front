@@ -6,11 +6,12 @@
       <v-spacer></v-spacer>
       <!-- Dropdown details -->
       <v-btn
+        v-if="details"
         icon
         @click="details.showDetails = !details.showDetails"
         v-tooltip:top="{ html: 'details' }"
       >
-        <v-icon v-if="details">{{ details.showDetails ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
+        <v-icon>{{ details.showDetails ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
       </v-btn>
     </v-card-actions>
   </v-flex>
