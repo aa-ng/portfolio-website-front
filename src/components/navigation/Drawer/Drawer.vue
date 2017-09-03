@@ -9,13 +9,12 @@
     :mini-variant="primaryDrawer.mini"
     enable-resize-watcher
     overflow
-    style="z-index: 1000;"
   >
     <v-toolbar class="transparent" flat prominent>
       <v-list class="pa-0">
         <v-list-tile avatar tag="div">
           <v-list-tile-avatar>
-            <img src="/favicon.png" />
+            <img src="/static/images/logos/logo.png" />
           </v-list-tile-avatar>
           <v-list-tile-content>
             <v-list-tile-title>Alex Ng</v-list-tile-title>
@@ -30,7 +29,7 @@
     </v-toolbar>
     <v-divider></v-divider>
     <v-list two-line>
-      <alex-drawer-link v-for="drawerLink in drawerLinks" :drawerLink="drawerLink"></alex-drawer-link>
+      <alex-drawer-link v-for="drawerLink in drawerLinks" :drawerLink="drawerLink" :key="drawerLink.label"></alex-drawer-link>
       <v-list-tile v-if="primaryDrawer.mini">
         <v-list-tile-action @click="primaryDrawer.mini = !primaryDrawer.mini" v-tooltip:top="{ html: 'expand' }">
           <v-icon>chevron_right</v-icon>
@@ -41,22 +40,12 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
   import DrawerLink from './DrawerLink.vue'
 
   export default {
-    props: {
-      primaryDrawer: {
-        type: Object,
-        default: {
-          model: true,
-          type: 'persistent',
-          clipped: false,
-          floating: false,
-          mini: false
-        }
-      }
-    },
     computed: {
+      ...mapGetters(['primaryDrawer']),
       drawerLinks () {
         return this.$store.getters.drawerLinks
       }

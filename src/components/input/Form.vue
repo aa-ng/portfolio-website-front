@@ -3,6 +3,7 @@
     <v-flex xs12 class="text-xs-center text-md-left card-text">
       <v-text-field
         v-for="input in form.inputs"
+        :key="input.label"
         :label="input.label"
         v-model="input.model"
         :multi-line="input.multiline"

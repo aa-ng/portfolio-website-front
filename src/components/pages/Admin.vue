@@ -54,6 +54,7 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
   import * as firebase from 'firebase'
   import Signup from '../users/Signup.vue'
   import Login from '../users/Login.vue'
@@ -74,15 +75,11 @@
       }
     },
     computed: {
-      user () {
-        return this.$store.getters.user
-      },
-      error () {
-        return this.$store.getters.error
-      },
-      loading () {
-        return this.$store.getters.loading
-      }
+      ...mapGetters([
+        'user',
+        'error',
+        'loading'
+      ])
     },
     watch: {
       user (val) {

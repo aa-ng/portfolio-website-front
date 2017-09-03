@@ -77,7 +77,6 @@
         return this.contained ? 'contain' : 'cover'
       },
       mediaBackgroundStyle () {
-        console.log(this.backgroundSource)
         return {
           'background-image': this.backgroundSource,
           'background-size': this.backgroundSize,

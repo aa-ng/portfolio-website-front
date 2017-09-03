@@ -21,32 +21,6 @@
 <script>
   import AppearenceSettings from '../settings/ThemeSettings.vue'
   export default {
-    props: {
-      primaryDrawer: {
-        type: Object,
-        default: {
-          model: true,
-          type: 'persistent',
-          clipped: false,
-          floating: false,
-          mini: false
-        }
-      },
-      drawers: {
-        type: Array,
-        default: ['Permanent', 'Persistent', 'Temporary']
-      },
-      footer: {
-        type: Object,
-        default: {
-          fixed: false
-        }
-      },
-      theme: {
-        type: Object,
-        default: { dark: true }
-      }
-    },
     components: {
       'alex-appearence-settings': AppearenceSettings
     }

@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar dark class="primary elevation-6" fixed style="z-index: 900;" prominent>
+  <v-toolbar dark class="primary elevation-6" fixed prominent>
     <v-toolbar-side-icon
       @click.stop="primaryDrawer.model = !primaryDrawer.model"
       v-if="primaryDrawer.type !== 'permanent'"
@@ -9,18 +9,10 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
   export default {
-    props: {
-      primaryDrawer: {
-        type: Object,
-        default: {
-          model: true,
-          type: 'persistent',
-          clipped: false,
-          floating: false,
-          mini: false
-        }
-      }
+    computed: {
+      ...mapGetters(['primaryDrawer'])
     }
   }
 </script>

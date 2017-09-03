@@ -20,6 +20,7 @@
         dark
         v-if="content.buttons"
         v-for="button in content.buttons"
+        :key="button.label"
         :to="button.link"
         :href="button.href"
       >

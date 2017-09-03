@@ -5,6 +5,7 @@
       class=""
       :class="[actionTextColor, buttonClasses]"
       v-for="action in actions"
+      :key="action.label"
       :href="action.href"
       :to="action.link"
     >

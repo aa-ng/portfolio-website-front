@@ -12,6 +12,7 @@ Vue.config.productionTip = false
 Vue.component('alex-alert', Alert)
 
 router.beforeEach((to, from, next) => {
+  store.dispatch('getRouteData', to)
   store.commit('setLoading', true)
   next()
 })

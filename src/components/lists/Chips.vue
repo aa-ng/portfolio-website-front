@@ -4,6 +4,7 @@
       class="white--text elevation-5"
       :class="chip.color"
       v-for="chip in chips"
+      :key="chip.label"
     >
       <v-avatar
         class="darken-4"

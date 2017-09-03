@@ -1,8 +1,7 @@
 <template>
   <v-layout row wrap>
-    <v-flex v-for="(card, i) in cards" v-bind="{ [`sm${card.flex} xs12`]: true }">
+    <v-flex v-for="(card, i) in cards" v-bind="{ [`sm${card.flex} xs12`]: true }" :key="card.title">
       <v-flex
-        :key="card.title"
       >
         <alex-presentation-card :card="card"></alex-presentation-card>
       </v-flex>

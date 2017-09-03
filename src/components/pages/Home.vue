@@ -13,12 +13,11 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
   import BasicCards from '../cards/Cards.vue'
   export default {
     computed: {
-      cards () {
-        return this.$store.getters.cards
-      }
+      ...mapGetters(['cards'])
     },
     components: {
       'alex-presentation-cards': BasicCards
