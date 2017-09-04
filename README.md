@@ -6,7 +6,7 @@
 ## Installation
 
 ``` bash
-git clone https://github.com/CynicalBird/portfolio-website.git
+git clone https://github.com/aa-ng/portfolio-website-front.git
 ```
 
 ## Build Setup
@@ -24,7 +24,4 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 
-# run production 
-cd dist
-npm start
 ```
