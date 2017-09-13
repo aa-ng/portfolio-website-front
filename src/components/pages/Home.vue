@@ -15,12 +15,15 @@
 <script>
   import { mapGetters } from 'vuex'
   import BasicCards from '../cards/Cards.vue'
+
   export default {
     computed: {
       ...mapGetters(['cards'])
     },
     components: {
       'alex-presentation-cards': BasicCards
+    },
+    created () {
     }
   }
 </script>

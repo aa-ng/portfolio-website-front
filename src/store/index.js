@@ -1,13 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-/* Contains all route card data */
-import Data from '../data/routeData'
 /* Theme settings module */
 import ThemeSettings from './modules/ThemeSettings'
 /* Authentication module */
 import Authentication from './modules/Authentication'
 /* Common Mutations */
 import * as mutations from './mutations'
+import * as actions from './actions'
 
 Vue.use(Vuex)
 
@@ -22,14 +21,7 @@ export const store = new Vuex.Store({
     cards: null
   },
   mutations,
-  actions: {
-    getRouteData ({commit, state}, payload) {
-      const routeData = Data.find(route => route.path.toUpperCase() === payload.path.toUpperCase())
-      if (routeData) {
-        commit('setCards', routeData.cards)
-      }
-    }
-  },
+  actions,
   getters: {
     loading (state) {
       return state.loading

@@ -1,6 +1,6 @@
 <template>
-  <v-card-title>
-    <div class="text-xs-center text-md-left card-content">
+  <v-card-title :style="[bodyPadding]">
+    <div class="text-xs-center text-md-left card-content" style="margin: 0;">
       <alex-card-content :content="body">
         <slot></slot>
       </alex-card-content>
@@ -15,6 +15,13 @@
     props: {
       body: {
         type: Object
+      }
+    },
+    computed: {
+      bodyPadding () {
+        return {
+          padding: this.body.padding
+        }
       }
     },
     components: {

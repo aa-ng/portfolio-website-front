@@ -8,13 +8,11 @@
       :style="mediaBackgroundStyle"
     ></div>
     <div class="card__media__content">
-      <v-container fill-height fluid>
+      <v-container fill-height fluid class="fill">
         <v-layout fill-height pa-1>
-
           <v-flex v-if="source" xs12 align-end flexbox :style="mediaTitleStyle">
             <span :class="mediaTextClasses">{{ media.title }}</span>
           </v-flex>
-
           <v-container
             v-if="icon"
             class="media-icon"
@@ -106,5 +104,16 @@
   div.media-icon { margin: auto; text-align: center; }
   sm6 {
     width: 33.333%;
+  }
+  div.flex > span {
+    text-shadow: -1px 0 rgba(60, 60, 60, 0.8), 0 1px rgba(60, 60, 60, 0.8), 1px 0 rgba(60, 60, 60, 0.8), 0 -1px rgba(60, 60, 60, 0.8);
+    text-align: center;
+  }
+  .fill {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
   }
 </style>

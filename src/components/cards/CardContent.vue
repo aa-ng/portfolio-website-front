@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container :style="[containerPadding]">
     <span v-if="typeof content === 'string'">{{ content }}</span>
     <!-- Details objects -->
     <div :class="content.textalign || 'text-xs-center text-md-left'" v-else>
@@ -27,6 +27,17 @@
         {{ button.label }}
         <v-icon right class="info--text">{{ button.icon || 'link' }}</v-icon>
       </v-btn>
+      <gmap-map
+        map-type-id="terrain"
+        style="width: auto; height: 200px;"
+        v-if="content.map"
+        :options="{disableDefaultUI: true, zoomControl: false, draggable: false}"
+        :center="content.map.position"
+        :draggable="false"
+        :zoom="content.map.zoom"
+      >
+        <gmap-marker :position="content.map.position"></gmap-marker>
+      </gmap-map>
     </div>
   </v-container>
 </template>
@@ -42,6 +53,13 @@
       content: {
         type: Object,
         required: true
+      }
+    },
+    computed: {
+      containerPadding () {
+        return {
+          padding: this.content.padding
+        }
       }
     },
     components: {
