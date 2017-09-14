@@ -10,23 +10,10 @@
       <!-- Details chips -->
       <alex-chips v-if="content.chips" :chips="content.chips"></alex-chips>
       <alex-form v-if="content.form" :form="content.form"></alex-form>
-      <alex-rotate-progress v-if="content.progress" :progress="content.progress"></alex-rotate-progress>
+      <alex-progress-rotate v-if="content.progress" :progress="content.progress"></alex-progress-rotate>
       <alex-list v-if="content.list" :list="content.list"></alex-list>
       <slot></slot>
       <!-- Details buttons -->
-      <v-btn
-        outline
-        info
-        dark
-        v-if="content.buttons"
-        v-for="button in content.buttons"
-        :key="button.label"
-        :to="button.link"
-        :href="button.href"
-      >
-        {{ button.label }}
-        <v-icon right class="info--text">{{ button.icon || 'link' }}</v-icon>
-      </v-btn>
       <gmap-map
         map-type-id="terrain"
         style="width: auto; height: 200px;"
@@ -47,6 +34,7 @@
   import Chips from '../lists/Chips.vue'
   import Form from '../input/Form.vue'
   import RotateProgress from '../progress/Rotate.vue'
+  import componentData from '../../data/componentData'
 
   export default {
     props: {
@@ -63,10 +51,10 @@
       }
     },
     components: {
-      'alex-list': List,
-      'alex-chips': Chips,
-      'alex-form': Form,
-      'alex-rotate-progress': RotateProgress
+      [componentData.list]: List,
+      [componentData.chips]: Chips,
+      [componentData.form]: Form,
+      [componentData.progressRotate]: RotateProgress
     }
   }
 </script>

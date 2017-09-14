@@ -7,6 +7,7 @@
 
 <script>
   import Tile from './Tile.vue'
+  import componentData from '../../data/componentData'
   export default {
     props: {
       list: {
@@ -14,7 +15,7 @@
       }
     },
     components: {
-      'alex-list-tile': Tile
+      [componentData.listTile]: Tile
     }
   }
 </script>

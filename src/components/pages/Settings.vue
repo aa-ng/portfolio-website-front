@@ -20,9 +20,10 @@
 
 <script>
   import AppearenceSettings from '../settings/ThemeSettings.vue'
+  import componentData from '../../data/componentData'
   export default {
     components: {
-      'alex-appearence-settings': AppearenceSettings
+      [componentData.appearenceSettings]: AppearenceSettings
     }
   }
 </script>

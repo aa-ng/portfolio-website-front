@@ -10,6 +10,7 @@
 
 <script>
   import CardContent from './CardContent.vue'
+  import componentData from '../../data/componentData'
 
   export default {
     props: {
@@ -25,7 +26,7 @@
       }
     },
     components: {
-      'alex-card-content': CardContent
+      [componentData.cardContent]: CardContent
     }
   }
 </script>

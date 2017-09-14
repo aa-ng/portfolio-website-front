@@ -7,7 +7,7 @@
             <v-alert info :value="newUser">
               Welcome! Notes are saved using local storage
             </v-alert>
-            <alex-note-cards :cards="cards"></alex-note-cards>
+            <alex-cards :cards="cards"></alex-cards>
           </v-container>
         </v-layout>
       </v-flex>
@@ -17,6 +17,7 @@
 
 <script>
   import Cards from '../../../cards/Cards.vue'
+  import componentData from '../../../../data/componentData'
 
   export default {
     data () {
@@ -133,7 +134,7 @@
       }
     },
     components: {
-      'alex-note-cards': Cards
+      [componentData.cards]: Cards
     }
   }
 </script>

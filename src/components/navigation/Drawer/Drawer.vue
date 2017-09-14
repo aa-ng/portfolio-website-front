@@ -42,6 +42,7 @@
 <script>
   import { mapGetters } from 'vuex'
   import DrawerLink from './DrawerLink.vue'
+  import componentData from '../../../data/componentData'
 
   export default {
     computed: {
@@ -51,7 +52,7 @@
       }
     },
     components: {
-      'alex-drawer-link': DrawerLink
+      [componentData.drawerLink]: DrawerLink
     }
   }
 </script>

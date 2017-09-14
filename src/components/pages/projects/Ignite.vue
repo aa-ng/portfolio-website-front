@@ -18,10 +18,11 @@
 
 <script>
   import Card from '../../cards/Card.vue'
+  import componentData from '../../../data/componentData'
 
   export default {
     components: {
-      'alex-card': Card
+      [componentData.card]: Card
     },
     data () {
       return {

@@ -18,6 +18,7 @@
 
 <script>
   import DropdownMenu from '../lists/DropdownMenu.vue'
+  import componentData from '../../data/componentData'
 
   export default {
     computed: {
@@ -38,7 +39,7 @@
       }
     },
     components: {
-      'alex-dropdown-menu': DropdownMenu
+      [componentData.dropdownMenu]: DropdownMenu
     }
   }
 </script>

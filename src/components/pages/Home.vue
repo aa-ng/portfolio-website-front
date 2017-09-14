@@ -4,7 +4,7 @@
       <v-flex xs12 md10>
         <v-layout column>
           <v-container grid-list-md>
-              <alex-presentation-cards :cards="cards"></alex-presentation-cards>
+              <alex-cards :cards="cards"></alex-cards>
           </v-container>
         </v-layout>
       </v-flex>
@@ -14,16 +14,15 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import BasicCards from '../cards/Cards.vue'
+  import componentData from '../../data/componentData'
+  import Cards from '../cards/Cards.vue'
 
   export default {
     computed: {
       ...mapGetters(['cards'])
     },
     components: {
-      'alex-presentation-cards': BasicCards
-    },
-    created () {
+      [componentData.cards]: Cards
     }
   }
 </script>

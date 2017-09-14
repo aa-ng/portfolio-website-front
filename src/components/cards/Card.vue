@@ -35,6 +35,7 @@
   import CardMedia from './CardMedia.vue'
   import CardDetails from './CardDetails.vue'
   import CardActions from './CardActions.vue'
+  import componentData from '../../data/componentData'
 
   export default {
     props: {
@@ -63,11 +64,11 @@
       }
     },
     components: {
-      'alex-card-toolbar': CardToolbar,
-      'alex-card-body': CardBody,
-      'alex-card-media': CardMedia,
-      'alex-card-actions': CardActions,
-      'alex-card-details': CardDetails
+      [componentData.cardToolbar]: CardToolbar,
+      [componentData.cardBody]: CardBody,
+      [componentData.cardMedia]: CardMedia,
+      [componentData.cardActions]: CardActions,
+      [componentData.cardDetails]: CardDetails
     }
   }
 </script>

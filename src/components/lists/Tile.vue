@@ -17,9 +17,6 @@
       tile: {
         required: true
       }
-    },
-    created () {
-      console.log(this.tile)
     }
   }
 </script>
