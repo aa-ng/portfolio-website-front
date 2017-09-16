@@ -1,10 +1,10 @@
 <template>
   <v-container>
     <v-progress-circular
-      :size="progress.size"
+      :size="data.size"
       :rotate="-90"
-      :width="progress.width"
-      :value="progress.value"
+      :width="data.width"
+      :value="data.value"
       class="info--text"
     >
       {{ progress.value }} %
@@ -15,7 +15,7 @@
 <script>
   export default {
     props: {
-      progress: {
+      data: {
         type: Object
       }
     }

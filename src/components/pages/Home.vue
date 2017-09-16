@@ -4,7 +4,7 @@
       <v-flex xs12 md10>
         <v-layout column>
           <v-container grid-list-md>
-              <alex-cards :cards="cards"></alex-cards>
+            <alex-cards :cards="cards"></alex-cards>
           </v-container>
         </v-layout>
       </v-flex>

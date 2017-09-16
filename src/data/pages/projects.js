@@ -1,3 +1,5 @@
+import componentData from '../componentData'
+
 export default {
   path: '/projects',
   cards: [
@@ -10,21 +12,35 @@ export default {
         height: '200px'
       },
       body: {
-        title: 'Ignite - online web game',
-        summary: 'Operation ignition is a online web base real time multiplayer, RPG game. Ignite is played from a 2D top down camera, with dynamically generated terrain. (WIP) Our game encourages teamwork with 9 unique classes, guilds, and party system.',
-        buttons: []
+        components: [
+          {
+            is: componentData.article,
+            data: {
+              title: 'Ignite - online web game',
+              paragraph: 'Operation ignition is a online web base real time multiplayer, RPG game. Ignite is played from a 2D top down camera, with dynamically generated terrain. (WIP) Our game encourages teamwork with 9 unique classes, guilds, and party system.'
+            }
+          }
+        ]
       },
       details: {
         showDetails: false,
-        chips: [
-          {label: 'NodeJS', icon: 'device_hub', color: 'green'},
-          {label: 'AngularJS', icon: 'pageview', color: 'red'},
-          {label: 'SocketJS', icon: 'rss_feed', color: 'blue'},
-          {label: 'TravisCI', icon: 'rss_feed', color: 'amber'},
-          {label: 'PhaserJS', icon: 'videogame_asset', color: 'purple'}
-        ],
-        buttons: [
-          {label: 'Details', link: '/projects/ignite', icon: 'link'}
+        components: [
+          {
+            is: componentData.button,
+            data: [
+              {label: 'Details', link: '/projects/ignite', icon: 'link'}
+            ]
+          },
+          {
+            is: componentData.chips,
+            data: [
+              {label: 'NodeJS', icon: 'device_hub', color: 'green'},
+              {label: 'AngularJS', icon: 'pageview', color: 'red'},
+              {label: 'SocketJS', icon: 'rss_feed', color: 'blue'},
+              {label: 'TravisCI', icon: 'rss_feed', color: 'amber'},
+              {label: 'PhaserJS', icon: 'videogame_asset', color: 'purple'}
+            ]
+          }
         ]
       },
       actions: [
@@ -41,19 +57,33 @@ export default {
         height: '200px'
       },
       body: {
-        title: 'Random maze generation project',
-        summary: 'My grade 12 Computer Science project featuring perfect maze random generation and a simple recursive backtracker solution. This project was written in Java using the growing tree algorithm. It also features many Object oriented programming techniques like inheritance and polymorphism.',
-        buttons: []
+        components: [
+          {
+            is: componentData.article,
+            data: {
+              title: 'Random maze generation project',
+              paragraph: 'My grade 12 Computer Science project featuring perfect maze random generation and a simple recursive backtracker solution. This project was written in Java using the growing tree algorithm. It also features many Object oriented programming techniques like inheritance and polymorphism.'
+            }
+          }
+        ]
       },
       details: {
         showDetails: false,
-        chips: [
-          {label: 'Java', icon: 'computer', color: 'red'},
-          {label: 'OOP', icon: 'extension', color: 'blue'},
-          {label: 'Growing tree algorithm', icon: 'call_split', color: 'green'}
-        ],
-        buttons: [
-          {label: 'More on perfect mazes', href: 'http://www.astrolog.org/labyrnth/algrithm.htm', icon: 'link'}
+        components: [
+          {
+            is: componentData.button,
+            data: [
+              {label: 'More on perfect mazes', href: 'http://www.astrolog.org/labyrnth/algrithm.htm', icon: 'link'}
+            ]
+          },
+          {
+            is: componentData.chips,
+            data: [
+              {label: 'Java', icon: 'computer', color: 'red'},
+              {label: 'OOP', icon: 'extension', color: 'blue'},
+              {label: 'Growing tree algorithm', icon: 'call_split', color: 'green'}
+            ]
+          }
         ]
       },
       actions: [
@@ -74,18 +104,36 @@ export default {
         height: '200px'
       },
       body: {
-        title: 'Stock trader web app',
-        summary: 'You can buy and sell stocks - App is hosted with Heroku free dynos first loads may be slower than expected.'
+        components: [
+          {
+            is: componentData.article,
+            data: {
+              title: 'Stock trader web app',
+              paragraph: 'You can buy and sell stocks'
+            }
+          },
+          {
+            is: componentData.notification,
+            data: {
+              message: 'App is hosted with Heroku free dynos first loads may be slower than expected.'
+            }
+          }
+        ]
       },
       details: {
         showDetails: false,
-        chips: [
-          {label: 'VueJS', icon: 'pageview', color: 'teal'},
-          {label: 'Animations', icon: 'directions_run', color: 'orange'},
-          {label: 'Vuex', icon: 'memory', color: 'light-blue'},
-          {label: 'Vuetify', icon: 'star', color: 'blue'},
-          {label: 'Local Storage', icon: 'save', color: 'indigo'},
-          {label: 'Heroku', icon: 'cloud', color: 'purple'}
+        components: [
+          {
+            is: componentData.chips,
+            data: [
+              {label: 'VueJS', icon: 'pageview', color: 'teal'},
+              {label: 'Animations', icon: 'directions_run', color: 'orange'},
+              {label: 'Vuex', icon: 'memory', color: 'light-blue'},
+              {label: 'Vuetify', icon: 'star', color: 'blue'},
+              {label: 'Local Storage', icon: 'save', color: 'indigo'},
+              {label: 'Heroku', icon: 'cloud', color: 'purple'}
+            ]
+          }
         ]
       },
       actions: [
@@ -106,16 +154,28 @@ export default {
         height: '200px'
       },
       body: {
-        title: 'Note taking web app',
-        summary: 'A simple note taking app using VueJS - WIP'
+        components: [
+          {
+            is: componentData.article,
+            data: {
+              title: 'Note taking web app',
+              paragraph: 'A simple note taking app using VueJS - WIP'
+            }
+          }
+        ]
       },
       details: {
         showDetails: false,
-        chips: [
-          {label: 'VueJS', icon: 'pageview', color: 'teal'},
-          {label: 'Animations', icon: 'directions_run', color: 'orange'},
-          {label: 'Vuetify', icon: 'star', color: 'blue'},
-          {label: 'Local Storage', icon: 'save', color: 'indigo'}
+        components: [
+          {
+            is: componentData.chips,
+            data: [
+              {label: 'VueJS', icon: 'pageview', color: 'teal'},
+              {label: 'Animations', icon: 'directions_run', color: 'orange'},
+              {label: 'Vuetify', icon: 'star', color: 'blue'},
+              {label: 'Local Storage', icon: 'save', color: 'indigo'}
+            ]
+          }
         ]
       },
       actions: [
@@ -135,8 +195,15 @@ export default {
         height: '200px'
       },
       body: {
-        title: 'SVG Animation / Manipulation',
-        summary: 'Adding animations to a SVG image'
+        components: [
+          {
+            is: componentData.article,
+            data: {
+              title: 'SVG Animation / Manipulation',
+              paragraph: 'Adding animations to a SVG image'
+            }
+          }
+        ]
       },
       actions: [
         {label: 'View', link: '/projects/webdev/svg-animation'},

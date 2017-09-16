@@ -14,8 +14,9 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import Cards from '../cards/Cards.vue'
   import componentData from '../../data/componentData'
+  import Cards from '../cards/Cards.vue'
+
   export default {
     computed: {
       ...mapGetters(['cards'])

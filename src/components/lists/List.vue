@@ -1,7 +1,7 @@
 <template>
   <v-list two-line subheader>
-    <v-subheader>{{ list.title }}</v-subheader>
-    <alex-list-tile v-for="tile in list.tiles" :tile="tile" :key="tile.note"></alex-list-tile>
+    <v-subheader>{{ data.title }}</v-subheader>
+    <alex-list-tile v-for="tile in data.tiles" :tile="tile" :key="tile.note"></alex-list-tile>
   </v-list>
 </template>
 
@@ -10,7 +10,7 @@
   import componentData from '../../data/componentData'
   export default {
     props: {
-      list: {
+      data: {
         type: [Array, Object]
       }
     },

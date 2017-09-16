@@ -15,5 +15,8 @@ export default {
   button: 'alex-button',
   dropdownMenu: 'alex-dropdown-menu',
   drawerLink: 'alex-drawer-link',
-  appearenceSettings: 'alex-appearence-settings'
+  appearenceSettings: 'alex-appearence-settings',
+  article: 'alex-article',
+  map: 'alex-gmap',
+  notification: 'alex-notification'
 }

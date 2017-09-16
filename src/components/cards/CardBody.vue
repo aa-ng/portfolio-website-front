@@ -2,7 +2,12 @@
   <v-card-title :style="[bodyPadding]">
     <div class="text-xs-center text-md-left card-content" style="margin: 0;">
       <alex-card-content :content="body">
-        <slot></slot>
+        <component
+          v-for="(component, index) in body.components"
+          :is="component.is"
+          :key="index"
+          :data="component.data"
+        ></component>
       </alex-card-content>
     </div>
   </v-card-title>
@@ -10,7 +15,14 @@
 
 <script>
   import CardContent from './CardContent.vue'
-  import componentData from '../../data/componentData'
+  import Notification from '../messages/Notification.vue'
+  import Article from '../text/Article.vue'
+  import List from '../lists/List.vue'
+  import Chips from '../lists/Chips.vue'
+  import Form from '../input/Form.vue'
+  import RotateProgress from '../progress/Rotate.vue'
+  import Map from '../location/Map.vue'
+  import componentConfig from '../../data/componentData'
 
   export default {
     props: {
@@ -26,7 +38,14 @@
       }
     },
     components: {
-      [componentData.cardContent]: CardContent
+      [componentConfig.cardContent]: CardContent,
+      [componentConfig.list]: List,
+      [componentConfig.chips]: Chips,
+      [componentConfig.form]: Form,
+      [componentConfig.progressRotate]: RotateProgress,
+      [componentConfig.notification]: Notification,
+      [componentConfig.article]: Article,
+      [componentConfig.map]: Map
     }
   }
 </script>

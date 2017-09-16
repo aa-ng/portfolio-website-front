@@ -2,8 +2,8 @@
   <div class="text-xs-center text-md-left">
     <v-chip
       class="white--text elevation-5"
+      v-for="chip in data"
       :class="chip.color"
-      v-for="chip in chips"
       :key="chip.label"
     >
       <v-avatar
@@ -20,7 +20,7 @@
 <script>
   export default {
     props: {
-      chips: {
+      data: {
         type: Array,
         required: true
       }
