@@ -29,14 +29,14 @@
     </v-card-text>
     <v-card-actions>
       <v-spacer></v-spacer>
-      <v-btn flat>Cancel</v-btn>
-      <v-btn flat primary>Save</v-btn>
+      <v-btn flat @click="resetSettings">Reset</v-btn>
+      <v-btn flat primary @click="saveSettings">Save</v-btn>
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
+  import { mapGetters, mapActions } from 'vuex'
   export default {
     computed: {
       ...mapGetters([
@@ -48,6 +48,16 @@
       themeLabel () {
         return this.theme.dark === true ? 'Dark' : 'Light'
       }
+    },
+    methods: {
+      ...mapActions([
+        'saveSettings',
+        'retrieveSettings',
+        'resetSettings'
+      ])
+    },
+    mounted () {
+      this.retrieveSettings()
     }
   }
 </script>

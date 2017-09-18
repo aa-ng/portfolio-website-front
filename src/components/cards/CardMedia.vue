@@ -93,7 +93,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   .layout .flex.md3 {
     width: 25%;
   }

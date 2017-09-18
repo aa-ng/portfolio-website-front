@@ -22,16 +22,26 @@
   export default {
     data () {
       return {
+        /*
+        arbitrary limit for max amount of notes
+        that can be stored at one time
+         */
         maxNotes: 10,
+        // current note user is writing
         currentNote: {label: 'Note', required: true, model: '', max: 110, multiline: true},
+        // all saved notes
         notes: [],
+        // stores if the user has visited the app before
         newUser: true
       }
     },
     created () {
       if (localStorage) {
+        // retrive stored notes from local storage
         var notes = JSON.parse(localStorage.getItem('notes'))
+        // retrieve if user has visited the application before
         var newUser = localStorage.getItem('newNotesUser')
+        // if notes where found from local storage
         if (notes) {
           console.log('saved notes found: ' + notes)
           // adding back delete function to notes since local storage doesn't seem to store the delete function
