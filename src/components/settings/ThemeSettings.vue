@@ -52,12 +52,8 @@
     methods: {
       ...mapActions([
         'saveSettings',
-        'retrieveSettings',
         'resetSettings'
       ])
-    },
-    mounted () {
-      this.retrieveSettings()
     }
   }
 </script>

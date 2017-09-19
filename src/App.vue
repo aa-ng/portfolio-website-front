@@ -18,10 +18,10 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
   import Drawer from './components/navigation/Drawer/Drawer.vue'
   import HeaderBar from './components/navigation/Header/HeaderBar.vue'
   import Loading from './components/progress/Loading.vue'
+  import { mapGetters, mapActions } from 'vuex'
 
   export default {
     computed: {
@@ -31,6 +31,12 @@
       'alex-drawer': Drawer,
       'alex-header': HeaderBar,
       'alex-loading': Loading
+    },
+    methods: {
+      ...mapActions(['retrieveSettings'])
+    },
+    mounted () {
+      this.retrieveSettings()
     }
   }
 </script>
