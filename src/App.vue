@@ -19,8 +19,9 @@
 
 <script>
   import Drawer from './components/navigation/Drawer/Drawer.vue'
-  import HeaderBar from './components/navigation/Header/HeaderBar.vue'
+  import Toolbar from './components/navigation/Header/HeaderBar.vue'
   import Loading from './components/progress/Loading.vue'
+  import componentData from './data/componentData'
   import { mapGetters, mapActions } from 'vuex'
 
   export default {
@@ -28,9 +29,9 @@
       ...mapGetters(['loading', 'theme', 'footer'])
     },
     components: {
-      'alex-drawer': Drawer,
-      'alex-header': HeaderBar,
-      'alex-loading': Loading
+      [componentData.drawer]: Drawer,
+      [componentData.toolbar]: Toolbar,
+      [componentData.loading]: Loading
     },
     methods: {
       ...mapActions(['retrieveSettings'])

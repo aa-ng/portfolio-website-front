@@ -1,6 +1,9 @@
 <template>
   <v-card class="mb-1 elevation-6">
-    <alex-card-toolbar v-if="card.toolbar" :toolbar="card.toolbar"></alex-card-toolbar>
+    <alex-card-toolbar
+      v-if="card.toolbar"
+      :toolbar="card.toolbar"
+    ></alex-card-toolbar>
     <v-container>
       <v-layout row wrap>
         <!-- Card image -->
@@ -21,9 +24,16 @@
           </alex-card-body>
           <v-divider v-if="card && card.actions"></v-divider>
           <!-- Card actions -->
-          <alex-card-actions v-if="card && card.actions" :actions="card.actions" :details="card.details"></alex-card-actions>
+          <alex-card-actions
+            v-if="card && card.actions"
+            :actions="card.actions"
+            :details="card.details"
+          ></alex-card-actions>
         </v-flex>
-        <alex-card-details v-if="card && card.details" :details="card.details"></alex-card-details>
+        <alex-card-details
+          v-if="card && card.details"
+          :details="card.details"
+        ></alex-card-details>
       </v-layout>
     </v-container>
   </v-card>
@@ -59,7 +69,6 @@
     },
     watch: {
       cardBodyHeight (value) {
-        alert(value)
         return value
       }
     },
@@ -74,8 +83,11 @@
 </script>
 
 <style scoped>
-  div.container, div.row, div.flex
-  {
+  div.card {
+    max-width: 700px;
+    margin: auto;
+  }
+  div.container, div.row, div.flex {
     padding: 0px;
     margin: 0px;
   }

@@ -14,9 +14,12 @@ export default {
   progressRotate: 'alex-progress-rotate',
   button: 'alex-button',
   dropdownMenu: 'alex-dropdown-menu',
+  drawer: 'alex-drawer',
+  toolbar: 'alex-header',
   drawerLink: 'alex-drawer-link',
   appearenceSettings: 'alex-appearence-settings',
   article: 'alex-article',
   map: 'alex-gmap',
-  notification: 'alex-notification'
+  notification: 'alex-notification',
+  loading: 'alex-loading'
 }

@@ -1,10 +1,11 @@
 <template>
   <v-layout row wrap>
-    <v-flex v-for="(card, i) in cards" v-bind="{ [`sm${card.flex} xs12`]: true }" :key="card.title">
-      <v-flex
-      >
-        <alex-presentation-card :card="card"></alex-presentation-card>
-      </v-flex>
+    <v-flex
+      v-for="(card, i) in cards"
+      v-bind="{ [`sm${card.flex} xs12`]: true }"
+      :key="card.title"
+    >
+      <alex-presentation-card :card="card"></alex-presentation-card>
     </v-flex>
   </v-layout>
 </template>
@@ -21,6 +22,11 @@
     },
     components: {
       'alex-presentation-card': PresentationCard
+    },
+    computed: {
+      cardContainerFlex () {
+        return this.card.flex ? {[`sm${this.card.flex} xs12`]: true} : {'xs12': true}
+      }
     },
     mounted () {
       var sr = ScrollReveal({ reset: false })
