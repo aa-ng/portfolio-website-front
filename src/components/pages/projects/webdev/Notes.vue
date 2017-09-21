@@ -97,14 +97,24 @@
           {
             toolbar: {
               title: 'Notes overview',
-              color: 'accent'
+              color: 'secondary'
             },
             body: {
               flex: 12,
-              title: 'Notes app',
-              summary: 'Welcome to my notes app!',
               textalign: 'text-xs-center',
-              progress: this.progress
+              components: [
+                {
+                  is: componentData.article,
+                  data: {
+                    title: 'Notes app',
+                    paragraph: 'Welcome to my notes app!'
+                  }
+                },
+                {
+                  is: componentData.progressRotate,
+                  data: this.progress
+                }
+              ]
             }
           },
           {
@@ -114,15 +124,24 @@
             },
             body: {
               flex: 12,
-              title: 'Add a note',
-              form: {
-                inputs: [ this.currentNote ],
-                action: {
-                  label: 'Save note',
-                  icon: 'save',
-                  click: this.saveNote
+              components: [
+                {
+                  is: componentData.article,
+                  data: { title: 'Add a note' }
+                },
+                {
+                  is: componentData.form,
+                  marginBottom: '0px',
+                  data: {
+                    inputs: [ this.currentNote ],
+                    action: {
+                      label: 'Save note',
+                      icon: 'save',
+                      click: this.saveNote
+                    }
+                  }
                 }
-              }
+              ]
             }
           },
           {
@@ -132,12 +151,26 @@
             },
             body: {
               flex: 12,
-              summary: 'Note checkboxes are currently a work in progress',
-              list: {
-                title: 'Saved notes',
-                tiles: this.notes
-              },
-              buttons: [{label: 'Delete selected notes', action: 'test'}]
+              components: [
+                {
+                  is: componentData.alert,
+                  data: {
+                    type: 'warning',
+                    message: 'Note checkboxes are currently a work in progress'
+                  }
+                },
+                {
+                  is: componentData.list,
+                  data: {
+                    title: 'Saved notes',
+                    tiles: this.notes
+                  }
+                },
+                {
+                  is: componentData.button,
+                  data: [{label: 'Delete selected notes', action: 'test'}]
+                }
+              ]
             }
           }
         ]
@@ -150,6 +183,6 @@
 </script>
 
 <style scoped>
-  .container { padding: 16px 8px; }
+  .container { padding: 16px 8px;}
   .alert.info { margin: 10px 4px; }
 </style>

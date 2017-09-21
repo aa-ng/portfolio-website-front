@@ -1,6 +1,10 @@
 <template>
   <!-- dismissible -->
-  <v-alert info @input="onClose" :value="true">
+  <v-alert
+    v-bind="alertType"
+    @input="onClose"
+    :value="true"
+  >
     {{ data.message }}
   </v-alert>
 </template>
@@ -10,6 +14,11 @@
     methods: {
       onClose () {
         this.$emit('dismissed')
+      }
+    },
+    computed: {
+      alertType () {
+        return this.data.type ? {[this.data.type]: true} : {info: true}
       }
     },
     props: ['data']

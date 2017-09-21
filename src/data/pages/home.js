@@ -102,10 +102,10 @@ export default {
         title: 'About me',
         contain: true,
         src: '/static/images/profile-pic-round-min.png',
-        flex: 'xs12 md4 lg3'
+        flex: 'xs12 md4'
       },
       body: {
-        flex: 'xs12 md8 lg9',
+        flex: 'xs12 md8',
         components: [
           {
             is: componentConfig.article,
@@ -147,10 +147,16 @@ export default {
       body: {
         components: [
           {
+            is: componentConfig.alert,
+            data: {
+              type: 'error',
+              message: 'Fields below are currently in maintenance, send me an email at: Alex.ng.personal@gmail.com'
+            }
+          },
+          {
             is: componentConfig.article,
             data: {
-              title: 'Contact me',
-              paragraph: 'Fields below are currently in maintenance, send me an email at: Alex.ng.personal@gmail.com'
+              title: 'Contact me'
             }
           },
           {

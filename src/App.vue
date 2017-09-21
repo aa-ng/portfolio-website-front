@@ -5,7 +5,7 @@
     :light="!theme.dark"
     standalone
   >
-    <alex-loading v-if="loading"></alex-loading>
+    <alex-progress-bar v-if="loading"></alex-progress-bar>
     <alex-drawer></alex-drawer>
     <alex-header></alex-header>
     <main>
@@ -19,7 +19,7 @@
 
 <script>
   import Drawer from './components/navigation/Drawer/Drawer.vue'
-  import Toolbar from './components/navigation/Header/HeaderBar.vue'
+  import Toolbar from './components/navigation/Toolbar/Toolbar.vue'
   import Loading from './components/progress/Loading.vue'
   import componentData from './data/componentData'
   import { mapGetters, mapActions } from 'vuex'
@@ -31,7 +31,7 @@
     components: {
       [componentData.drawer]: Drawer,
       [componentData.toolbar]: Toolbar,
-      [componentData.loading]: Loading
+      [componentData.progressBar]: Loading
     },
     methods: {
       ...mapActions(['retrieveSettings'])

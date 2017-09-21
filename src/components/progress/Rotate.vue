@@ -7,7 +7,7 @@
       :value="data.value"
       class="info--text"
     >
-      {{ progress.value }} %
+      {{ data.value }} %
     </v-progress-circular>
   </v-container>
 </template>

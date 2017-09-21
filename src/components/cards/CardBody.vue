@@ -7,6 +7,7 @@
           :is="component.is"
           :key="index"
           :data="component.data"
+          :style="componentBottomMargin(index)"
         ></component>
       </alex-card-content>
     </div>
@@ -15,7 +16,7 @@
 
 <script>
   import CardContent from './CardContent.vue'
-  import Notification from '../messages/Notification.vue'
+  import Notification from '../messages/Alert.vue'
   import Article from '../text/Article.vue'
   import List from '../lists/List.vue'
   import Chips from '../lists/Chips.vue'
@@ -34,6 +35,17 @@
       bodyPadding () {
         return {
           padding: this.body.padding
+        }
+      }
+    },
+    methods: {
+      /*
+      add margin to the bottom of the component
+      unless the component is the last one
+       */
+      componentBottomMargin (index) {
+        return {
+          'margin-bottom': (index === this.body.components.length - 1 ? '0px' : '10px')
         }
       }
     },

@@ -20,6 +20,6 @@ export default {
   appearenceSettings: 'alex-appearence-settings',
   article: 'alex-article',
   map: 'alex-gmap',
-  notification: 'alex-notification',
-  loading: 'alex-loading'
+  alert: 'alex-alert',
+  progressBar: 'alex-progress-bar'
 }

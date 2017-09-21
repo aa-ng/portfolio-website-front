@@ -4,7 +4,7 @@ import App from './App'
 import router from './router'
 import { store } from './store'
 import * as VueGoogleMaps from 'vue2-google-maps'
-import Alert from './components/messages/Notification.vue'
+import Alert from './components/messages/Alert.vue'
 
 Vue.use(Vuetify)
 Vue.config.productionTip = false

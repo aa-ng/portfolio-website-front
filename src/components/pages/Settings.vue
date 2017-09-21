@@ -29,5 +29,5 @@
 </script>
 
 <style scoped>
-  .container { padding: 16px 8px; }
+  div.container { padding: 16px 8px; }
 </style>

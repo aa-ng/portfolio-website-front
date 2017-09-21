@@ -1,12 +1,12 @@
 <template>
-  <v-card>
+  <v-card style="max-width: 900px; margin: 20px auto;">
     <v-card-text>
       <v-layout row wrap>
-        <v-flex xs12 md6 mt-1>
+        <v-flex xs12 sm6 md4 mt-1>
           <span>Theme</span>
           <v-switch primary :label="themeLabel" v-model="theme.dark" color="accent"></v-switch>
         </v-flex>
-        <v-flex xs12 md6>
+        <v-flex xs12 sm6 md4>
           <span>Drawer</span>
           <v-radio
             primary
@@ -21,7 +21,7 @@
           <v-switch label="Floating" v-model="primaryDrawer.floating" primary color="accent"></v-switch>
           <v-switch label="Mini" v-model="primaryDrawer.mini" primary color="accent"></v-switch>
         </v-flex>
-        <v-flex xs12 md6>
+        <v-flex xs12 sm6 md4>
           <span>Footer</span>
           <v-switch label="Fixed" v-model="footer.fixed" primary></v-switch>
         </v-flex>
@@ -36,6 +36,8 @@
 </template>
 
 <script>
+  import Card from '../cards/Card.vue'
+  import componentData from '../../data/componentData'
   import { mapGetters, mapActions } from 'vuex'
   export default {
     computed: {
@@ -49,6 +51,9 @@
         return this.theme.dark === true ? 'Dark' : 'Light'
       }
     },
+    components: {
+      [componentData.card]: Card
+    },
     methods: {
       ...mapActions([
         'saveSettings',
@@ -57,3 +62,9 @@
     }
   }
 </script>
+
+<style scoped>
+  div.layout.row.wrap {
+    padding: 20px;
+  }
+</style>

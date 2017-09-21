@@ -14,6 +14,13 @@ export default {
       body: {
         components: [
           {
+            is: componentData.notification,
+            data: {
+              message: 'Work in progress',
+              type: 'warning'
+            }
+          },
+          {
             is: componentData.article,
             data: {
               title: 'Ignite - online web game',
@@ -106,16 +113,16 @@ export default {
       body: {
         components: [
           {
+            is: componentData.notification,
+            data: {
+              message: 'App is hosted with Heroku free dynos first loads may be slower than expected.'
+            }
+          },
+          {
             is: componentData.article,
             data: {
               title: 'Stock trader web app',
               paragraph: 'You can buy and sell stocks'
-            }
-          },
-          {
-            is: componentData.notification,
-            data: {
-              message: 'App is hosted with Heroku free dynos first loads may be slower than expected.'
             }
           }
         ]
@@ -159,7 +166,7 @@ export default {
             is: componentData.article,
             data: {
               title: 'Note taking web app',
-              paragraph: 'A simple note taking app using VueJS - WIP'
+              paragraph: 'A simple note taking app using VueJS'
             }
           }
         ]
