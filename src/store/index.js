@@ -4,6 +4,8 @@ import Vuex from 'vuex'
 import ThemeSettings from './modules/ThemeSettings'
 /* Authentication module */
 import Authentication from './modules/Authentication'
+/* Notifications module */
+import Notifications from './modules/Notifications'
 /* Common Mutations */
 import * as mutations from './mutations'
 import * as actions from './actions'
@@ -13,7 +15,8 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
   modules: {
     Authentication,
-    ThemeSettings
+    ThemeSettings,
+    Notifications
   },
   state: {
     loading: false,

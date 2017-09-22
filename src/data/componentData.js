@@ -21,5 +21,6 @@ export default {
   article: 'alex-article',
   map: 'alex-gmap',
   alert: 'alex-alert',
-  progressBar: 'alex-progress-bar'
+  progressBar: 'alex-progress-bar',
+  snackbar: 'alex-snackbar'
 }

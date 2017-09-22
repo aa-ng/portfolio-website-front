@@ -30,7 +30,7 @@
     <v-card-actions>
       <v-spacer></v-spacer>
       <v-btn flat @click="resetSettings">Reset</v-btn>
-      <v-btn flat primary @click="saveSettings">Save</v-btn>
+      <v-btn flat primary @click="saveUserSettings">Save</v-btn>
     </v-card-actions>
   </v-card>
 </template>
@@ -57,8 +57,15 @@
     methods: {
       ...mapActions([
         'saveSettings',
-        'resetSettings'
-      ])
+        'resetSettings',
+        'toggleSnackBar',
+        'setSnackBarMessage'
+      ]),
+      saveUserSettings () {
+        this.saveSettings()
+        this.setSnackBarMessage('Saved settings!')
+        this.toggleSnackBar()
+      }
     }
   }
 </script>
