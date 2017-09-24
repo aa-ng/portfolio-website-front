@@ -13,13 +13,14 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
-  import componentData from '../../data/componentData'
   import Cards from '../cards/Cards.vue'
+  import componentData from '../../data/componentData'
+  import { mapGetters } from 'vuex'
+  import * as types from '../../store/types'
 
   export default {
     computed: {
-      ...mapGetters(['cards'])
+      ...mapGetters({cards: types.CARDS})
     },
     components: {
       [componentData.cards]: Cards

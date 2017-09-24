@@ -1,6 +1,8 @@
+import * as types from '../types'
+
 var state = {
-  defaultMessage: 'Hello there!',
-  snackbar: {
+  [types.DEFAULT_MESSAGE]: 'Hello there!',
+  [types.SNACKBAR]: {
     model: false,
     x: null,
     y: 'bottom',
@@ -13,37 +15,37 @@ var state = {
 }
 
 var mutations = {
-  setSnackBarMessage (state, payload) {
+  [types.MUTATE_SNACKBAR_MESSAGE] (state, payload) {
     if (typeof payload === 'string') {
-      state.snackbar.message = payload
+      state[types.SNACKBAR].message = payload
     }
   },
-  setSnackBarModel (state, payload) {
-    state.snackbar.model = payload
+  [types.MUTATE_SNACKBAR_MODEL] (state, payload) {
+    state[types.SNACKBAR].model = payload
   }
 }
 
 var actions = {
-  toggleSnackBar ({commit, getters}) {
-    commit('setSnackBarModel', !getters.snackbar.model)
+  [types.TOGGLE_SNACKBAR] ({commit, getters}) {
+    commit(types.MUTATE_SNACKBAR_MODEL, !getters[types.SNACKBAR].model)
   },
-  resetSnackBarMessage ({commit, state, getters}) {
+  [types.RESET_SNACKBAR_MESSAGE] ({commit, state, getters}) {
     // reset the snackbar message after the snackbar timeout
     setInterval(() => {
-      commit('setSnackBarModel', getters.defaultMessage)
-    }, state.snackbar.timeout)
+      commit(types.MUTATE_SNACKBAR_MESSAGE, getters.defaultMessage)
+    }, state[types.SNACKBAR].timeout)
   },
-  setSnackBarMessage ({commit}, payload) {
-    commit('setSnackBarMessage', payload)
+  [types.UPDATE_SNACKBAR_MESSAGE] ({commit}, payload) {
+    commit(types.MUTATE_SNACKBAR_MESSAGE, payload)
   }
 }
 
 var getters = {
-  snackbar (state) {
-    return state.snackbar
+  [types.SNACKBAR] (state) {
+    return state[types.SNACKBAR]
   },
-  defaultMessage (state) {
-    return state.defaultMessage
+  [types.DEFAULT_MESSAGE] (state) {
+    return state[types.DEFAULT_MESSAGE]
   }
 }
 

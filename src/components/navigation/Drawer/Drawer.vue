@@ -40,16 +40,17 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
   import DrawerLink from './DrawerLink.vue'
   import componentData from '../../../data/componentData'
+  import { mapGetters } from 'vuex'
+  import * as types from '../../../store/types'
 
   export default {
     computed: {
-      ...mapGetters(['primaryDrawer']),
-      drawerLinks () {
-        return this.$store.getters.drawerLinks
-      }
+      ...mapGetters({
+        primaryDrawer: types.PRIMARY_DRAWER,
+        drawerLinks: types.DRAWER_LINKS
+      })
     },
     components: {
       [componentData.drawerLink]: DrawerLink

@@ -1,10 +1,12 @@
+import { THEME, PRIMARY_DRAWER, FOOTER } from '../../store/types'
+
 export default {
-  theme: {
+  [THEME]: {
     dark: true,
     actionColor: 'info'
   },
   // drawer data
-  primaryDrawer: {
+  [PRIMARY_DRAWER]: {
     // active / open model
     model: true,
     // stores the current type of drawer
@@ -13,7 +15,7 @@ export default {
     floating: false,
     mini: false
   },
-  footer: {
+  [FOOTER]: {
     // footer position fixed
     fixed: false
   }

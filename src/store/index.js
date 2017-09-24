@@ -7,8 +7,10 @@ import Authentication from './modules/Authentication'
 /* Notifications module */
 import Notifications from './modules/Notifications'
 /* Common Mutations */
-import * as mutations from './mutations'
-import * as actions from './actions'
+import mutations from './mutations'
+import actions from './actions'
+// global types
+import * as types from './types'
 
 Vue.use(Vuex)
 
@@ -19,21 +21,21 @@ export const store = new Vuex.Store({
     Notifications
   },
   state: {
-    loading: false,
-    error: null,
-    cards: null
+    [types.LOADING]: false,
+    [types.ERROR]: null,
+    [types.CARDS]: null
   },
   mutations,
   actions,
   getters: {
-    loading (state) {
-      return state.loading
+    [types.LOADING] (state) {
+      return state[types.LOADING]
     },
-    error (state) {
-      return state.error
+    [types.ERROR] (state) {
+      return state[types.ERROR]
     },
-    cards (state) {
-      return state.cards
+    [types.CARDS] (state) {
+      return state[types.CARDS]
     }
   }
 })

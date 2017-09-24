@@ -4,22 +4,20 @@ import App from './App'
 import router from './router'
 import { store } from './store'
 import * as VueGoogleMaps from 'vue2-google-maps'
-import Alert from './components/messages/Alert.vue'
+import * as types from './store/types'
 
 Vue.use(Vuetify)
 Vue.config.productionTip = false
 
-Vue.component('alex-alert', Alert)
-
 router.beforeEach((to, from, next) => {
-  store.dispatch('getRouteData', to)
-  store.commit('setLoading', true)
+  store.dispatch(types.GET_ROUTE_DATA, to)
+  store.commit(types.MUTATE_LOADING, true)
   next()
 })
 
 router.afterEach(() => {
   // use action to create fake delay to loading so loading bar doesn't disappear right away
-  store.dispatch('setLoading', false)
+  store.dispatch(types.UPDATE_LOADING, false)
 })
 
 Vue.use(VueGoogleMaps, {

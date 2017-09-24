@@ -19,6 +19,8 @@
 <script>
   import DropdownMenu from '../lists/DropdownMenu.vue'
   import componentData from '../../data/componentData'
+  import { mapGetters } from 'vuex'
+  import * as types from '../../store/types'
 
   export default {
     computed: {
@@ -28,8 +30,9 @@
       menuClasses () {
         return this.actions.length > 1 ? 'hidden-sm-and-up' : 'hidden-xs-only hidden-sm-and-up'
       },
+      ...mapGetters([types.THEME]),
       actionTextColor () {
-        return this.$store.getters.theme.actionColor + '--text'
+        return this[types.THEME].actionColor + '--text'
       }
     },
     props: {

@@ -15,8 +15,8 @@
 </template>
 
 <script>
+  import Alert from '../messages/Alert.vue'
   import CardContent from './CardContent.vue'
-  import Notification from '../messages/Alert.vue'
   import Article from '../text/Article.vue'
   import List from '../lists/List.vue'
   import Chips from '../lists/Chips.vue'
@@ -50,12 +50,12 @@
       }
     },
     components: {
+      [componentConfig.alert]: Alert,
       [componentConfig.cardContent]: CardContent,
       [componentConfig.list]: List,
       [componentConfig.chips]: Chips,
       [componentConfig.form]: Form,
       [componentConfig.progressRotate]: RotateProgress,
-      [componentConfig.notification]: Notification,
       [componentConfig.article]: Article,
       [componentConfig.map]: Map
     }

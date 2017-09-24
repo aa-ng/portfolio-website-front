@@ -10,9 +10,10 @@
 
 <script>
   import { mapGetters } from 'vuex'
+  import * as types from '../../../store/types'
   export default {
     computed: {
-      ...mapGetters(['primaryDrawer'])
+      ...mapGetters({primaryDrawer: types.PRIMARY_DRAWER})
     }
   }
 </script>

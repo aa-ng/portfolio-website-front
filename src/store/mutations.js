@@ -1,15 +1,13 @@
-export const setCards = (state, payload) => {
-  state.cards = payload
-}
+import * as types from './types'
 
-export const setLoading = (state, payload) => {
-  state.loading = payload
-}
-
-export const setError = (state, payload) => {
-  state.error = payload
-}
-
-export const clearError = (state) => {
-  state.error = null
+export default {
+  [types.MUTATE_LOADING]: (state, payload) => {
+    state[types.LOADING] = payload
+  },
+  [types.MUTATE_CARDS]: (state, payload) => {
+    state[types.CARDS] = payload
+  },
+  [types.MUTATE_ERROR]: (state, payload) => {
+    state[types.ERROR] = payload
+  }
 }

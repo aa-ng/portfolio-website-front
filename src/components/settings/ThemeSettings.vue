@@ -29,7 +29,7 @@
     </v-card-text>
     <v-card-actions>
       <v-spacer></v-spacer>
-      <v-btn flat @click="resetSettings">Reset</v-btn>
+      <v-btn flat @click="resetUserSettings">Reset</v-btn>
       <v-btn flat primary @click="saveUserSettings">Save</v-btn>
     </v-card-actions>
   </v-card>
@@ -39,14 +39,16 @@
   import Card from '../cards/Card.vue'
   import componentData from '../../data/componentData'
   import { mapGetters, mapActions } from 'vuex'
+  import * as types from '../../store/types'
+
   export default {
     computed: {
-      ...mapGetters([
-        'primaryDrawer',
-        'drawers',
-        'footer',
-        'theme'
-      ]),
+      ...mapGetters({
+        primaryDrawer: types.PRIMARY_DRAWER,
+        drawers: types.DRAWERS,
+        footer: types.FOOTER,
+        theme: types.THEME
+      }),
       themeLabel () {
         return this.theme.dark === true ? 'Dark' : 'Light'
       }
@@ -55,15 +57,20 @@
       [componentData.card]: Card
     },
     methods: {
-      ...mapActions([
-        'saveSettings',
-        'resetSettings',
-        'toggleSnackBar',
-        'setSnackBarMessage'
-      ]),
+      ...mapActions({
+        saveSettings: [types.SAVE_SETTINGS],
+        resetSettings: [types.RESET_SETTINGS],
+        toggleSnackBar: [types.TOGGLE_SNACKBAR],
+        setSnackbarMessage: [types.UPDATE_SNACKBAR_MESSAGE]
+      }),
       saveUserSettings () {
         this.saveSettings()
-        this.setSnackBarMessage('Saved settings!')
+        this.setSnackbarMessage('Saved settings!')
+        this.toggleSnackBar()
+      },
+      resetUserSettings () {
+        this.resetSettings()
+        this.setSnackbarMessage('Settings are reset.')
         this.toggleSnackBar()
       }
     }
