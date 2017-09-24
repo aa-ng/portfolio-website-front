@@ -99,9 +99,13 @@
   }
   div.card__media {
     height: 100%;
-    min-height: 200px;
+    min-height: 100px;
   }
-  div.media-icon { margin: auto; text-align: center; }
+  div.media-icon {
+    margin: auto;
+    text-align: center;
+    padding: 0px;
+  }
   sm6 {
     width: 33.333%;
   }

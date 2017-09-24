@@ -19,7 +19,7 @@
     computed: {
       containerPadding () {
         return {
-          padding: this.content.padding
+          padding: this.content.padding || '0'
         }
       }
     }

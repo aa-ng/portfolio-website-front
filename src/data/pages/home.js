@@ -1,3 +1,4 @@
+import { MAZE_PROJECT, STOCK_TRADER, NOTE_APP } from '../projectData'
 import componentConfig from '../componentData'
 
 export default {
@@ -10,7 +11,7 @@ export default {
         flex: 'xs12',
         color: 'accent',
         contain: true,
-        height: '200px'
+        height: '150px'
       },
       body: {
         flex: 'xs12',
@@ -18,7 +19,6 @@ export default {
           {
             is: componentConfig.article,
             data: {
-              title: "Welcome I'm Alex",
               paragraph: 'Welcome to my portfolio website!'
             }
           },
@@ -36,7 +36,7 @@ export default {
     {
       media: {
         title: 'Projects',
-        height: '200px',
+        height: '150px',
         src: '/static/images/projects/ignite/preview-min.png',
         flex: 'xs12'
       },
@@ -47,7 +47,7 @@ export default {
             is: componentConfig.article,
             data: {
               title: 'Projects',
-              paragraph: 'Check out some of my selected projects here on this site or on Github.'
+              paragraph: 'Check out my full list of my selected projects.'
             }
           }
         ]
@@ -65,8 +65,11 @@ export default {
           }
         ]
       },
-      actions: [{label: 'Details', link: '/projects'}]
+      actions: [{label: 'More', link: '/projects'}]
     },
+    STOCK_TRADER,
+    NOTE_APP,
+    MAZE_PROJECT,
     {
       media: {
         title: 'Location',
@@ -75,11 +78,12 @@ export default {
           size: 'x-large',
           name: 'location_city'
         },
-        flex: 'xs4'
+        height: '132px',
+        flex: 'xs6 md4'
       },
       body: {
         padding: '0px',
-        flex: 'xs8',
+        flex: 'xs6 md8',
         components: [
           {
             is: componentConfig.map,
@@ -111,7 +115,7 @@ export default {
             is: componentConfig.article,
             data: {
               title: 'About me',
-              paragraph: 'Entering their 3rd year of Computer Science at Ryerson university Alex is strengthening their development portfolio, with new technologies and frameworks like VueJS, NodeJS and Firebase. Alex is also interested in the future of machine learning and data sciences.'
+              paragraph: 'Entering their 3rd year of Computer Science at Ryerson university Alex is practicing core web app development concepts with new technologies and frameworks like VueJS and NodeJS. Alex is also interested in the future of machine learning and data sciences.'
             }
           }
         ]
@@ -139,7 +143,7 @@ export default {
         ]
       },
       actions: [
-        {label: 'Details', link: '/about'},
+        {label: 'More', link: '/about'},
         {label: 'Resume', href: '/static/documents/resume.pdf', icon: 'assignment'}
       ]
     },

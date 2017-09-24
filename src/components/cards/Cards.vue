@@ -5,23 +5,25 @@
       v-bind="{ [`sm${card.flex} xs12`]: true }"
       :key="card.title"
     >
-      <alex-presentation-card :card="card"></alex-presentation-card>
+      <alex-card :card="card"></alex-card>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
-  import PresentationCard from './Card.vue'
+  import Card from './Card.vue'
   import * as ScrollReveal from 'scrollreveal'
+  import componentData from '../../data/componentData'
+
   export default {
     props: {
       cards: {
-        type: Array,
+        type: [Array, Object],
         required: true
       }
     },
     components: {
-      'alex-presentation-card': PresentationCard
+      [componentData.card]: Card
     },
     computed: {
       cardContainerFlex () {
