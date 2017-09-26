@@ -8,8 +8,7 @@ const state = {
     { icon: 'laptop', link: '/projects', label: 'My projects' },
     { icon: 'assignment', href: '/static/documents/resume.pdf', label: 'Resume' },
     { icon: 'face', link: '/about', label: 'About alex' },
-    { icon: 'settings', link: '/settings', label: 'Settings' },
-    { icon: 'lock', link: '/admin', label: 'Admin' }
+    { icon: 'settings', link: '/settings', label: 'Settings' }
   ],
   [types.DRAWERS]: ['Permanent', 'Persistent', 'Temporary'],
   // stores the variables we want to save for settings
