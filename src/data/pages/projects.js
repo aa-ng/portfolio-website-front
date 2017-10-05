@@ -1,4 +1,4 @@
-import * as projectData from '../projectData'
+import projectData from '../projectData'
 
 export default {
   path: '/projects',

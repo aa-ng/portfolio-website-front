@@ -1,6 +1,6 @@
 import componentData from './componentData'
 
-export const IGNITE = {
+export var IGNITE = {
   name: 'ignite',
   media: {
     title: 'Ignite - online web game',
@@ -53,7 +53,7 @@ export const IGNITE = {
   ]
 }
 
-export const MAZE_PROJECT = {
+export var MAZE_PROJECT = {
   name: 'mazeproject',
   media: {
     title: 'Random maze generation project',
@@ -100,7 +100,7 @@ export const MAZE_PROJECT = {
   ]
 }
 
-export const STOCK_TRADER = {
+export var STOCK_TRADER = {
   name: 'stock-trader-app',
   media: {
     title: 'Stock trader web app',
@@ -151,7 +151,7 @@ export const STOCK_TRADER = {
   ]
 }
 
-export const NOTE_APP = {
+export var NOTE_APP = {
   name: 'noteapp',
   media: {
     title: 'Note taking web app',
@@ -194,7 +194,7 @@ export const NOTE_APP = {
   ]
 }
 
-export const SVG_ANIMATION = {
+export var SVG_ANIMATION = {
   name: 'SvgAnimation',
   media: {
     title: 'SVG Animation',
@@ -221,3 +221,5 @@ export const SVG_ANIMATION = {
     {label: 'View on github', href: 'https://github.com/aa-ng/portfolio-website-front/blob/master/static/images/logos/chrome.svg?short_path=af42474#L6-L38', icon: 'code'}
   ]
 }
+
+export default [IGNITE, MAZE_PROJECT, STOCK_TRADER, NOTE_APP, SVG_ANIMATION]
