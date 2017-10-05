@@ -7,6 +7,7 @@
         :label="input.label"
         v-model="input.model"
         :multi-line="input.multiline"
+        :type="input.type"
         :rules="[rules.required]"
         :max="input.max"
         counter

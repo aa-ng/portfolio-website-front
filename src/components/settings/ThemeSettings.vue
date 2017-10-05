@@ -25,6 +25,10 @@
           <span>Footer</span>
           <v-switch label="Fixed" v-model="footer.fixed" primary></v-switch>
         </v-flex>
+        <v-flex xs12 sm6 md4>
+          <span>Snackbar</span>
+          <!-- <v-switch primary :label="themeLabel" v-model="theme.dark" color="accent"></v-switch> -->
+        </v-flex>
       </v-layout>
     </v-card-text>
     <v-card-actions>

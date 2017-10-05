@@ -12,17 +12,16 @@
       <router-view></router-view>
     </main>
     <alex-snackbar :data="snackbar"></alex-snackbar>
-    <v-footer :absolute="footer.fixed">
-      <span>Alex Ng © {{ new Date().getFullYear() }}</span>
-    </v-footer>
+    <alex-footer></alex-footer>
   </v-app>
 </template>
 
 <script>
-  import Drawer from './components/navigation/Drawer/Drawer.vue'
-  import Toolbar from './components/navigation/Toolbar/Toolbar.vue'
+  import Drawer from './components/navigation/drawer/Drawer.vue'
+  import Toolbar from './components/navigation/toolbar/Toolbar.vue'
   import Loading from './components/progress/Loading.vue'
   import Snackbar from './components/messages/Snackbar.vue'
+  import Footer from './components/navigation/footer/Footer.vue'
   import componentData from './data/componentData'
   import { mapGetters, mapActions } from 'vuex'
   import * as types from './store/types'
@@ -32,7 +31,6 @@
       ...mapGetters({
         loading: [types.LOADING],
         theme: [types.THEME],
-        footer: [types.FOOTER],
         snackbar: [types.SNACKBAR]
       }),
       dark () {
@@ -43,7 +41,8 @@
       [componentData.drawer]: Drawer,
       [componentData.toolbar]: Toolbar,
       [componentData.progressBar]: Loading,
-      [componentData.snackbar]: Snackbar
+      [componentData.snackbar]: Snackbar,
+      [componentData.footer]: Footer
     },
     methods: {
       ...mapActions({

@@ -13,6 +13,7 @@ export default {
   form: 'alex-form',
   progressRotate: 'alex-progress-rotate',
   button: 'alex-button',
+  buttons: 'alex-buttons',
   dropdownMenu: 'alex-dropdown-menu',
   drawer: 'alex-drawer',
   toolbar: 'alex-header',
@@ -22,5 +23,6 @@ export default {
   map: 'alex-gmap',
   alert: 'alex-alert',
   progressBar: 'alex-progress-bar',
-  snackbar: 'alex-snackbar'
+  snackbar: 'alex-snackbar',
+  footer: 'alex-footer'
 }

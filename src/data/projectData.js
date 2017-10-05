@@ -30,7 +30,7 @@ export const IGNITE = {
     showDetails: false,
     components: [
       {
-        is: componentData.button,
+        is: componentData.buttons,
         data: [
           {label: 'Details', link: '/projects/ignite', icon: 'link'}
         ]
@@ -76,9 +76,12 @@ export const MAZE_PROJECT = {
     showDetails: false,
     components: [
       {
-        is: componentData.button,
+        is: componentData.buttons,
         data: [
-          {label: 'More on perfect mazes', href: 'http://www.astrolog.org/labyrnth/algrithm.htm', icon: 'link'}
+          {
+            label: 'More on perfect mazes',
+            href: 'http://www.astrolog.org/labyrnth/algrithm.htm'
+          }
         ]
       },
       {

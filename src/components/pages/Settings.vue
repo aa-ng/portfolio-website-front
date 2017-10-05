@@ -19,11 +19,11 @@
 </template>
 
 <script>
-  import AppearenceSettings from '../settings/ThemeSettings.vue'
+  import ThemeSettings from '../settings/ThemeSettings.vue'
   import componentData from '../../data/componentData'
   export default {
     components: {
-      [componentData.appearenceSettings]: AppearenceSettings
+      [componentData.appearenceSettings]: ThemeSettings
     }
   }
 </script>

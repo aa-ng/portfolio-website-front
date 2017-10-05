@@ -1,4 +1,5 @@
 import { MAZE_PROJECT, STOCK_TRADER, NOTE_APP } from '../projectData'
+import { GITHUB, LINKEDIN, EMAIL } from '../socialMedia'
 import componentConfig from '../componentData'
 
 export default {
@@ -56,7 +57,7 @@ export default {
         showDetails: false,
         components: [
           {
-            is: componentConfig.button,
+            is: componentConfig.buttons,
             data: [
               {label: 'Random maze gen', link: '/projects#mazeproject'},
               {label: 'Ignite', link: '/projects#ignite'},
@@ -167,9 +168,24 @@ export default {
             is: componentConfig.form,
             data: {
               inputs: [
-                {label: 'Name', required: true, model: ''},
-                {label: 'Email', required: true, model: ''},
-                {label: 'Message', required: true, model: '', multiline: true}
+                {
+                  label: 'Name',
+                  required: true,
+                  model: '',
+                  type: 'text'
+                },
+                {
+                  label: 'Email',
+                  required: true,
+                  model: '',
+                  type: 'email'
+                },
+                {
+                  label: 'Message',
+                  required: true,
+                  model: '',
+                  multiline: true
+                }
               ],
               action: {
                 label: 'Out of order',
@@ -180,9 +196,9 @@ export default {
         ]
       },
       actions: [
-        {label: 'Github', href: 'https://github.com/aa-ng', icon: 'link'},
-        {label: 'LinkedIn', href: 'https://www.linkedin.com/in/alex-ng-130039134/?ppe=1', icon: 'link'},
-        {label: 'Email', href: 'mailto:alex.ng.personal@gmail.com', icon: 'email'}
+        {label: 'Github', href: GITHUB, icon: 'link'},
+        {label: 'LinkedIn', href: LINKEDIN, icon: 'link'},
+        {label: 'Email', href: EMAIL, icon: 'email'}
       ]
     }
   ]

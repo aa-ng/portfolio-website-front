@@ -19,7 +19,7 @@
 
 <script>
   import CardContent from './CardContent.vue'
-  import Button from '../input/Button.vue'
+  import Buttons from '../input/Buttons.vue'
   import Article from '../text/Article.vue'
   import List from '../lists/List.vue'
   import Chips from '../lists/Chips.vue'
@@ -36,7 +36,7 @@
     },
     components: {
       [componentConfig.cardContent]: CardContent,
-      [componentConfig.button]: Button,
+      [componentConfig.buttons]: Buttons,
       [componentConfig.list]: List,
       [componentConfig.chips]: Chips,
       [componentConfig.form]: Form,

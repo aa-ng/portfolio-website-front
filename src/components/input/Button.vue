@@ -1,19 +1,22 @@
 <template>
-  <div>
-    <v-btn
-      outline
-      info
-      dark
-      v-if="data"
-      v-for="button in data"
-      :key="button.label"
-      :to="button.link"
-      :href="button.href"
+  <v-btn
+    flat
+    info
+    dark
+    v-if="data"
+    :key="data.label"
+    :to="data.link"
+    :href="data.href"
+  >
+    <span class="secondary--text">{{ data.label }}</span>
+    <v-icon
+      right
+      v-bind="iconSize"
+      :class="[iconColor, iconSize]"
     >
-    {{ button.label }}
-    <v-icon right class="info--text">{{ button.icon || 'link' }}</v-icon>
+      {{ icon }}
+    </v-icon>
   </v-btn>
-  </div>
 </template>
 
 <script>
@@ -22,6 +25,20 @@
       data: {
         type: [Object, Array]
       }
+    },
+    computed: {
+      icon () {
+        return this.data.icon ? this.data.icon.name : 'link'
+      },
+      iconSize () {
+        return this.data.icon ? {[this.data.icon.size]: true} || {medium: true} : {medium: true}
+      },
+      iconColor () {
+        return this.data.icon ? this.data.icon.color || {'secondary--text': true} : {'secondary--text': true}
+      }
+    },
+    mounted () {
+      console.log(this.data)
     }
   }
 </script>

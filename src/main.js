@@ -5,6 +5,7 @@ import router from './router'
 import { store } from './store'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import * as types from './store/types'
+import 'font-awesome/css/font-awesome.min.css'
 
 Vue.use(Vuetify)
 Vue.config.productionTip = false
