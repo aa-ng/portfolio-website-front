@@ -36,9 +36,6 @@
       iconColor () {
         return this.data.icon ? this.data.icon.color || {'secondary--text': true} : {'secondary--text': true}
       }
-    },
-    mounted () {
-      console.log(this.data)
     }
   }
 </script>
